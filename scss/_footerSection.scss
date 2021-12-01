@@ -1,0 +1,39 @@
+@import 'variables.scss';
+
+
+.footerSection {
+    margin-top: 30px;
+    background-color: $color-primario;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    overflow: hidden;
+
+    > p {
+        width: 250px;
+        height: 30px;
+        text-align: center;
+        font-size: 14px;
+        border-bottom: 1px solid $color-secundario;
+    }
+    
+    .footerSection__technologies {
+        width: 300px;
+        margin-left: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      
+        p {
+            display: inline-block;  
+        }
+
+        img {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+        }
+    }
+}

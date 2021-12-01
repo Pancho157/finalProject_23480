@@ -1,0 +1,370 @@
+@import "general.scss";
+@import "header.scss";
+@import "infoSection.scss";
+@import "toolsSection.scss";
+@import "formSection.scss";
+@import "footerSection.scss";
+@import "toolPageInfoSection.scss";
+
+/* ----------------------------------------------------Vista Tablet-------------------------- */
+
+@media screen and (min-device-width: 712px) {
+  .toolSection {
+    padding-top: 60px;
+    height: 800px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    h2 {
+      margin-top: -60px;
+      height: 40px;
+      line-height: 40px;
+    }
+
+    .card {
+      margin: 0;
+      margin-top: 10px;
+    }
+  }
+
+  .formSection {
+    width: 100%;
+
+    > form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+      row-gap: 20px;
+      padding: 0 20px;
+
+      .formSection__inputsLeftGroup {
+        display: flex;
+        flex-direction: column;
+        row-gap: 15px;
+
+        .formSection__inputsLeftGroup__inputContainer {
+          display: flex;
+          column-gap: 10px;
+
+          input {
+            width: 250px;
+            font-size: 16px;
+            font-family: PT Sans;
+            border-bottom: 1px solid $color-secundario;
+            border-left: none;
+            color: #a1a0a0;
+            border-top: #a1a0a0;
+            border-right: #a1a0a0;
+          }
+
+          img {
+            width: 45px;
+          }
+        }
+
+        .formSection__textarea {
+          textarea {
+            border-bottom: 1px solid $color-secundario;
+            border-left: 1px solid $color-secundario;
+            color: #a1a0a0;
+            border-top: #a1a0a0;
+            border-right: #a1a0a0;
+            height: 185px;
+            width: 300px;
+            font-size: 18px;
+          }
+        }
+      }
+
+      .formSection__checkbox {
+        h3 {
+          font-family: PT Sans;
+          color: $color-secundario;
+          font-size: 20px;
+          margin-top: -10px;
+        }
+      }
+
+      .formSection__selection {
+        margin-top: 15px;
+        display: flex;
+        flex-direction: column;
+
+        #selection {
+          width: 360px;
+          height: 30px;
+          margin-top: 15px;
+          border-radius: 8px;
+        }
+
+        .form__buttons {
+          .form__buttons--reset,
+          .form__buttons--send {
+            height: 35px;
+            padding: 0 20px;
+            margin-left: 10px;
+            margin-bottom: 10px;
+            margin-top: 50px;
+            border-radius: 10px;
+            border: none;
+          }
+
+          .form__buttons--reset {
+            margin-left: 27%;
+          }
+
+          .form__buttons--send {
+            background-color: $color-primario;
+            padding: 0 30px;
+          }
+        }
+      }
+    }
+  }
+
+  .formSection__checkbox__item label,
+  .formSection__selection--title {
+    font-family: PT Sans;
+    font-size: 15px;
+    color: #a1a0a0;
+    font-weight: 100;
+  }
+
+  .footerSection > p {
+    border: none;
+    line-height: 30px;
+  }
+}
+
+/* ----------------------------------------------------Vista Tablet Acostada-------------------------- */
+
+@media screen and (min-device-width: 1188px) {
+  header {
+    flex-direction: row;
+    height: 70px;
+
+    .header__brandLogo {
+      width: 45%;
+      text-align: right;
+      padding-left: 10%;
+
+      .header__brandLogo--img {
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+    .header__menu {
+      padding: 0;
+      width: 35%;
+      background-color: $color-primario;
+      color: $color-secundario;
+      margin-left: 60%;
+      line-height: 40px;
+      z-index: 2;
+
+      ul {
+        background-color: $color-primario;
+        justify-content: space-between;
+        margin-top: 0px;
+
+        li {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  .navigation {
+    .navigation__item {
+      .navigation__item__content {
+        .navigation__item__content--title,
+        p {
+          width: 453px;
+        }
+
+        .navigation__item__content--title {
+          font-size: 20px;
+          line-height: 50px;
+        }
+
+        #carouselExampleIndicators {
+          width: 300px;
+          height: 350px;
+          background-color: $color-terciario;
+          border-radius: 7%;
+          overflow: hidden;
+          position: absolute;
+          margin: -360px 0 0 49% !important;
+        }
+      }
+    }
+  }
+
+  .toolSection {
+    padding-top: 60px;
+    height: auto;
+    padding-bottom: 40px;
+
+    h2 {
+      margin-top: -60px;
+      height: 40px;
+      line-height: 40px;
+    }
+
+    .card {
+      width: 220px;
+      height: 450px;
+    }
+  }
+
+  .formSection {
+    width: 92%;
+    margin-left: 8%;
+
+    form {
+      column-gap: 90px;
+    }
+  }
+}
+
+/* ----------------------------------------------------Vista Computadora-------------------------- */
+
+@media screen and (min-device-width: 1440px) {
+  .infoSection {
+    margin-top: 0;
+    width: 93%;
+    height: 900px;
+    margin-left: 7%;
+    padding-right: 5%;
+    background-color: $color-terciario;
+    overflow: auto;
+
+    aside {
+      h2 {
+        font-family: PT Sans;
+        font-size: 28px;
+        text-align: left;
+        color: $color-secundario;
+      }
+
+      .navigation {
+        line-height: 60px;
+        border: none;
+        margin-top: 50px;
+
+        ul {
+          .navigation__item {
+            span {
+              background-color: $color-terciario;
+              color: $color-secundario;
+              margin-left: 5px;
+              border: none;
+              text-align: left;
+              line-height: 60px;
+            }
+
+            .navigation__item__content {
+              display: none;
+              background-color: $color-secundario;
+
+              .navigation__item__content--title {
+                margin-left: 78px;
+                margin-top: 25px;
+              }
+
+              p {
+                line-height: 20px;
+                width: 470px;
+                height: 185px;
+                margin-left: 80px;
+                color: $color-terciario;
+                padding: 7px;
+                border: 1px solid $color-terciario;
+                box-shadow: 1px 1px 1px $color-terciario,
+                  2px 2px 1px $color-terciario, 3px 3px 1px $color-terciario;
+                margin-bottom: 60px;
+              }
+
+              p:last-of-type {
+                height: 70px;
+              }
+
+              #carouselExampleIndicators {
+                width: 400px;
+                height: 520px;
+                background-color: $color-terciario;
+                border-radius: 7%;
+                overflow: hidden;
+                position: absolute;
+                margin: -650px 0 0 55% !important;
+              }
+            }
+          }
+
+          .navigation__item--active {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            > span {
+              color: $color-terciario;
+              background-color: $color-secundario;
+              border-top-left-radius: 25px;
+              border-bottom-left-radius: 25px;
+              padding-left: 15px;
+            }
+
+            > .navigation__item__content {
+              display: initial;
+              position: absolute;
+              width: 73%;
+              margin-top: -117px;
+              margin-left: 20%;
+              padding-top: 30px;
+              width: 73%;
+              height: 84vh;
+              border-bottom-left-radius: 80px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .toolSection {
+    background-color: $color-terciario;
+    margin-top: 0;
+    height: auto;
+    padding: 150px 160px 30px 160px;
+    width: 93.05%;
+    margin-left: 6.95%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    border-radius: 0 0 0 50px;
+    padding-bottom: 30px;
+
+    h2 {
+      position: absolute;
+      margin-top: -100px;
+      background-color: $color-terciario;
+      line-height: 50px;
+      font-size: 35px;
+      font-family: PT Sans;
+      border: none;
+    }
+  }
+
+  .formSection {
+    width: 92%;
+    border-radius: 0;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    margin: 50px 0;
+  }
+}

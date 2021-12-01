@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta name="description"
+    content="Connect.It es una página que habla sobre fibra óptica, sus funcionalidades, ventajas y desventajas, como así también habla sobre como trabajar la misma">
+  <meta name="keywords"
+    content="FIBRA ÓPTICA, FUSIONES, FUSIONES DE FIBRA, CONECTORES, CONECTORES PARA FIBRA, HERRAMIENTAS, HERRAMIENTAS PARA FIBRA, ATENUACIÓN, DB, DBM, ALCOHOL ISOPROPILICO, CLEAVER, FUSIONADORA DE FIBRA, LAPIZ LIMPIADOR, OTDR, PELADOR PLANO, PINZA PELADORA, POWER METER">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" type="image/jpg" href="assets/Icons/logoColor.svg" />
+  <title>Connect.It - Home Page</title>
+</head>
+
+<body>
+
+
+  <!--Este script tiene la funcionalidad de cambiar el contenido que se muestra en la sección de información
+Aún me queda aeriguar como cambiar la clase del elemento padre (es decir del li en vez del span)
+Una vez finalizado el script voy a crear un archivo externo para que lo importen todos los html, a excepción del de herramientas (que no tiene esa sección)-->
+  <script>
+    $(function () {
+      $('h3').click(function () {
+        $('h3.active').removeClass('active');
+        $(this).addClass('active');
+      });
+    });
+  </script>
+
+  <!-------------------HEADER START------------------->
+  <header>
+    <a href="index.html">
+      <div class="header__brandLogo">
+        <div class="header__brandLogo--img"></div>
+        <h1 class="header__brandLogo--brand">Connect.It</h1>
+      </div>
+    </a>
+
+    <nav class="header__menu">
+      <ul>
+        <li><a href="index.html" class="header__menu--item" tabindex="0">Inicio</a></li>
+        <li><a href="pages/preconectorizados.html" class="header__menu--item" tabindex="0">Preconectorizados</a></li>
+        <li><a href="pages/fusiones.html" class="header__menu--item" tabindex="0">Fusiones</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-------------------HEADER END------------------->
+
+  <div class="clearFix"></div>
+  <main>
+    <!-------------------INFO SECTION START------------------->
+    <section class="infoSection" id="info">
+      <aside>
+        <h2>
+          FIBRA ÓPTICA<br />
+          Información General
+        </h2>
+        <div class="navigation">
+          <ul>
+            <!-------------------LI START------------------->
+            <li class="navigation__item navigation__item--active" tabindex="0">
+              <span>¿Qué es la fibra Óptica?</span>
+
+              <!---- En el div content irá el contenido de los diferentes items del wireframe, ocultando todos exceptuando el activo ---->
+              <div class="navigation__item__content">
+                <span class="navigation__item__content--title">¿Qué es la Fibra Óptica?</span>
+                <p>
+                  Es una fibra flexible, hecha de embutir o extrudir vidrio (silice) o plástico, que tiene un diámetro ligeramente más grueso que un cabello humano promedio.
+                  Las mismas poseen varios recubrimientos para que no se filtre y/o ingrese luz por otro lado que no sean sus extremos, proteger los pelos de agentes externos (como el sol) y tambien el resistir mecanicamente y evitar romper la misma por doblarla/estirarla demasiado.
+                </p>
+
+                <span class="navigation__item__content--title">¿Cómo viaja la luz por la fibra¡</span>
+                <p> 
+                  Cuando miramos hacia arriba estando debajo del agua notaremos que hay partes en las que podemos mirar hacia el cielo (deformandose un poco) y partes en las que no, ya que estamos viendo la luz reflejarse, ya que llega desde un ángulo crítico.
+                  Este es el mismo principio que utiliza la fibra óptica para transmitir datos, haciendo que la fibra actue como una guía para las ondas de luz, debido a que se mantiene reflejandose dentro del núcleo de la fobra.
+                </p>
+
+                <span class="navigation__item__content--title">Bibliografía</span>
+                <p>
+                  La información redactada arriba se basa en experiencia personal, como así también en algunos cursos de capacitación sobre el tema y por supuesto Wikipedia
+                </p>
+
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                      class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                      aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                      aria-label="Slide 3"></button>
+                  </div>
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="assets/Images/fibraOptica.jpg" class="d-block w-100"
+                        alt="Imagen de los pelos de una fibra">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Images/fusionesFibra.jpg" class="d-block w-100"
+                        alt="Imagen de una fusionadora de fibra">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Images/otdr.jpg" class="d-block w-100" alt="Imagen de un OTDR">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+              </div>
+            </li>
+            <!-------------------LI END------------------->
+            <!-------------------LI START------------------->
+            <li class="navigation__item" tabindex="0">
+              <span>¿Para que utilizar la Fibra Óptica?</span>
+
+              <!---- En el div content irá el contenido de los diferentes items del wireframe, ocultando todos exceptuando el activo ---->
+              <div class="navigation__item__content">
+                <span class="navigation__item__content--title">La fibra en las telecomunicaciones</span>
+                <p>
+                  Son utilizadas comúnmente como un medio para transmitir luz entre dos puntas de una fibra y tienen un amplio uso en las comunicaciones por fibra óptica, donde permiten la transmisión en distancias y en un ancho de banda (velocidad de datos) más grandes que los cables eléctricos.
+                  Estas también tienen la ventaja de ser dielectricas, es decir, que no la afectan los campos magnéticos que pasen cerca de la misma, haciendo que la información transmitida sea más fiable
+                </p>
+
+                <span class="navigation__item__content--title">Otros usos para la fibra óptica</span>
+                <p>
+                  También se usan para la iluminación e imaginería, y normalmente se envuelven en paquetes para introducir o sacar luz de espacios reducidos, como en el caso de un fibroscopio.3​ Algunas fibras diseñadas de manera especial se usan también para una amplia variedad de aplicaciones diversas, algunas de ellas son los sensores de fibra óptica y los láseres de fibra
+                </p>
+
+                <span class="navigation__item__content--title">Bibliografía</span>
+                <p>
+                  La información redactada arriba se basa en experiencia personal, como así también en algunos cursos de capacitación sobre el tema y por supuesto Wikipedia
+                </p>
+
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                      class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                      aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                      aria-label="Slide 3"></button>
+                  </div>
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="assets/Images/fibraOptica.jpg" class="d-block w-100"
+                        alt="Imagen de los pelos de una fibra">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Images/fusionesFibra.jpg" class="d-block w-100"
+                        alt="Imagen de una fusionadora de fibra">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Images/otdr.jpg" class="d-block w-100" alt="Imagen de un OTDR">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+              </div>
+            </li>
+            <!-------------------LI END------------------->
+            <!-------------------LI START------------------->
+            <li class="navigation__item" tabindex="0">
+              <span>Atenuación, Reflexión y Refracción</span>
+
+              <!---- En el div content irá el contenido de los diferentes items del wireframe, ocultando todos exceptuando el activo ---->
+              <div class="navigation__item__content">
+                <span class="navigation__item__content--title">¿Qué es la atenuación?</span>
+                <p>
+                  La atenuación es cualquier tipo de fenómeno que causa la disminución de la potencia de la señal propagada por una fibra, pero sin afectar la forma de la misma.
+                  La atenuación aumenta exponencialmente con el aumento de la longitud de la fibra, reduciendo así el alcance de transmisión de datos por la misma.
+                </p>
+
+                <span class="navigation__item__content--title">Reflexión y Refracción</span>
+                <p>
+                  La reflexión ocurre cuando los rayos de luz que inciden en una superficie chocan en ella, se desvían y regresan al medio que salieron formando un ángulo igual al de la luz incidente, muy distinta a la refracción.
+                  La refracción es el fenómeno por el cual la luz que se propaga en forma de onda cambia de velocidad al pasar de un medio material a otro distinto, por ejemplo, cambiar del aire al agua.
+                </p>
+
+                <span class="navigation__item__content--title">Bibliografía</span>
+                <p>
+                  La información redactada arriba se basa en experiencia personal, como así también en algunos cursos de capacitación sobre el tema y por supuesto Wikipedia
+                </p>
+
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                      class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                      aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                      aria-label="Slide 3"></button>
+                  </div>
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="assets/Images/fibraOptica.jpg" class="d-block w-100"
+                        alt="Imagen de los pelos de una fibra">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Images/fusionesFibra.jpg" class="d-block w-100"
+                        alt="Imagen de una fusionadora de fibra">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Images/otdr.jpg" class="d-block w-100" alt="Imagen de un OTDR">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+              </div>
+            </li>
+            <!-------------------LI END------------------->
+            <!-------------------LI START------------------->
+            <li class="navigation__item" tabindex="0">
+              <span>¿Multimodo o Monomodo?</span>
+
+              <!---- En el div content irá el contenido de los diferentes items del wireframe, ocultando todos exceptuando el activo ---->
+              <div class="navigation__item__content">
+                <span class="navigation__item__content--title">¿Qué es la Fibra Óptica?</span>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Reiciendis excepturi nam facilis et id illo pariatur vel
+                  asperiores optio soluta neque, dolores repudiandae quod amet
+                  iste alias quasi rerum eligendi?
+                </p>
+
+                <span class="navigation__item__content--title">Definiciones más comunes</span>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Reiciendis excepturi nam facilis et id illo pariatur vel
+                  asperiores optio soluta neque, dolores repudiandae quod amet
+                  iste alias quasi rerum eligendi?
+                </p>
+
+                <span class="navigation__item__content--title">Bibliografía</span>
+                <p>
+                  La información redactada arriba se basa en experiencia personal, como así también en algunos cursos de capacitación sobre el tema y por supuesto Wikipedia
+                </p>
+
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                      class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                      aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                      aria-label="Slide 3"></button>
+                  </div>
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="assets/Images/fibraOptica.jpg" class="d-block w-100"
+                        alt="Imagen de los pelos de una fibra">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Images/fusionesFibra.jpg" class="d-block w-100"
+                        alt="Imagen de una fusionadora de fibra">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Images/otdr.jpg" class="d-block w-100" alt="Imagen de un OTDR">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+              </div>
+            </li>
+            <!-------------------LI END------------------->
+            <!-------------------LI START------------------->
+            <li class="navigation__item" tabindex="0">
+              <span>Marcas más utilizadas</span>
+
+              <!---- En el div content irá el contenido de los diferentes items del wireframe, ocultando todos exceptuando el activo ---->
+              <div class="navigation__item__content">
+                <span class="navigation__item__content--title">¿Qué es la Fibra Óptica?</span>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Reiciendis excepturi nam facilis et id illo pariatur vel
+                  asperiores optio soluta neque, dolores repudiandae quod amet
+                  iste alias quasi rerum eligendi?
+                </p>
+
+                <span class="navigation__item__content--title">Definiciones más comunes</span>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Reiciendis excepturi nam facilis et id illo pariatur vel
+                  asperiores optio soluta neque, dolores repudiandae quod amet
+                  iste alias quasi rerum eligendi?
+                </p>
+
+                <span class="navigation__item__content--title">Bibliografía</span>
+                <p>
+                  La información redactada arriba se basa en experiencia personal, como así también en algunos cursos de capacitación sobre el tema y por supuesto Wikipedia
+                </p>
+
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                      class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                      aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                      aria-label="Slide 3"></button>
+                  </div>
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="assets/Images/fibraOptica.jpg" class="d-block w-100"
+                        alt="Imagen de los pelos de una fibra">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Images/fusionesFibra.jpg" class="d-block w-100"
+                        alt="Imagen de una fusionadora de fibra">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Images/otdr.jpg" class="d-block w-100" alt="Imagen de un OTDR">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+              </div>
+            </li>
+            <!-------------------LI END------------------->
+            <!-------------------LI START------------------->
+            <li class="navigation__item" tabindex="0">
+              <span>¿Cómo tratar la Fibra Óptica?</span>
+
+              <!---- En el div content irá el contenido de los diferentes items del wireframe, ocultando todos exceptuando el activo ---->
+              <div class="navigation__item__content">
+                <span class="navigation__item__content--title">¿Qué es la Fibra Óptica?</span>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Reiciendis excepturi nam facilis et id illo pariatur vel
+                  asperiores optio soluta neque, dolores repudiandae quod amet
+                  iste alias quasi rerum eligendi?
+                </p>
+
+                <span class="navigation__item__content--title">Definiciones más comunes</span>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Reiciendis excepturi nam facilis et id illo pariatur vel
+                  asperiores optio soluta neque, dolores repudiandae quod amet
+                  iste alias quasi rerum eligendi?
+                </p>
+
+                <span class="navigation__item__content--title">Bibliografía</span>
+                <p>
+                  La información redactada arriba se basa en experiencia personal, como así también en algunos cursos de capacitación sobre el tema y por supuesto Wikipedia
+                </p>
+
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                      class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                      aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                      aria-label="Slide 3"></button>
+                  </div>
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="assets/Images/fibraOptica.jpg" class="d-block w-100"
+                        alt="Imagen de los pelos de una fibra">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Images/fusionesFibra.jpg" class="d-block w-100"
+                        alt="Imagen de una fusionadora de fibra">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Images/otdr.jpg" class="d-block w-100" alt="Imagen de un OTDR">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+              </div>
+            </li>
+            <!-------------------LI END------------------->
+            <!-------------------LI START------------------->
+            <li class="navigation__item" tabindex="0">
+              <span>¿Qué es la Fibra Óptica?</span>
+
+              <!---- En el div content irá el contenido de los diferentes items del wireframe, ocultando todos exceptuando el activo ---->
+              <div class="navigation__item__content">
+                <span class="navigation__item__content--title">¿Qué es la Fibra Óptica?</span>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Reiciendis excepturi nam facilis et id illo pariatur vel
+                  asperiores optio soluta neque, dolores repudiandae quod amet
+                  iste alias quasi rerum eligendi?
+                </p>
+
+                <span class="navigation__item__content--title">Definiciones más comunes</span>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Reiciendis excepturi nam facilis et id illo pariatur vel
+                  asperiores optio soluta neque, dolores repudiandae quod amet
+                  iste alias quasi rerum eligendi?
+                </p>
+
+                <span class="navigation__item__content--title">Bibliografía</span>
+                <p>
+                  La información redactada arriba se basa en experiencia personal, como así también en algunos cursos de capacitación sobre el tema y por supuesto Wikipedia
+                </p>
+
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                      class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                      aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                      aria-label="Slide 3"></button>
+                  </div>
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="assets/Images/fibraOptica.jpg" class="d-block w-100"
+                        alt="Imagen de los pelos de una fibra">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Images/fusionesFibra.jpg" class="d-block w-100"
+                        alt="Imagen de una fusionadora de fibra">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Images/otdr.jpg" class="d-block w-100" alt="Imagen de un OTDR">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+              </div>
+            </li>
+            <!-------------------LI END------------------->
+          </ul>
+        </div>
+      </aside>
+    </section>
+    <!-------------------INFO SECTION END------------------->
+
+    <!-------------------TOOLS SECTION START------------------->
+    <section class="toolSection" id="tools">
+      <h2>Herramientas para trabajos de Fibra Óptica</h2>
+
+      <div class="card" style="width: 18rem;" tabindex="0">
+        <img src="assets/Images/otdr.jpg" class="card-img-top" alt="Foto de un OTDR">
+        <div class="card-body">
+          <h5 class="card-title">OTDR</h5>
+          <p class="card-text">Esto es una card hecha con boostrap 5 y este texto simula información sobre la
+            herramienta de la foto.</p>
+          <a href="pages/herramienta.html#info">Leer mas</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;" tabindex="0">
+        <img src="assets/Images/powerMeter.jpg" class="card-img-top" alt="Foto de un Power Meter">
+        <div class="card-body">
+          <h5 class="card-title">Power Meter</h5>
+          <p class="card-text">Esto es una card hecha con boostrap 5 y este texto simula información sobre la
+            herramienta de la foto.</p>
+          <a href="pages/herramienta.html#info">Leer mas</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;" tabindex="0">
+        <img src="assets/Images/lapizLimpiador.jpg" class="card-img-top" alt="Foto de un lapiz limpiador">
+        <div class="card-body">
+          <h5 class="card-title">Lapiz Limpiador</h5>
+          <p class="card-text">Esto es una card hecha con boostrap 5 y este texto simula información sobre la
+            herramienta de la foto.</p>
+          <a href="pages/herramienta.html#info">Leer mas</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;" tabindex="0">
+        <img src="assets/Images/cleaver.jpg" class="card-img-top" alt="Foto de un cleaver">
+        <div class="card-body">
+          <h5 class="card-title">Cleaver</h5>
+          <p class="card-text">Esto es una card hecha con boostrap 5 y este texto simula información sobre la
+            herramienta de la foto.</p>
+          <a href="pages/herramienta.html#info">Leer mas</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;" tabindex="0">
+        <img src="assets/Images/pinzaPeladora.jpg" class="card-img-top" alt="Foto de una pinza peladora">
+        <div class="card-body">
+          <h5 class="card-title">Pinza Peladora</h5>
+          <p class="card-text">Esto es una card hecha con boostrap 5 y este texto simula información sobre la
+            herramienta de la foto.</p>
+          <a href="pages/herramienta.html#info">Leer mas</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;" tabindex="0">
+        <img src="assets/Images/peladorPlano.jpg" class="card-img-top" alt="Foto de un pelador de drop plano">
+        <div class="card-body">
+          <h5 class="card-title">Pelador de Drop Plano</h5>
+          <p class="card-text">Esto es una card hecha con boostrap 5 y este texto simula información sobre la
+            herramienta de la foto.</p>
+          <a href="pages/herramienta.html#info">Leer mas</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;" tabindex="0">
+        <img src="assets/Images/alcoholIsopropilico.jpg" class="card-img-top" alt="Foto de alcohol isopropilico">
+        <div class="card-body">
+          <h5 class="card-title">Alcohol Isopropilico</h5>
+          <p class="card-text">Esto es una card hecha con boostrap 5 y este texto simula información sobre la
+            herramienta de la foto.</p>
+          <a href="pages/herramienta.html#info">Leer mas</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;" tabindex="0">
+        <img src="assets/Images/fusionadora.jpg" class="card-img-top" alt="Foto de una fusionadora">
+        <div class="card-body">
+          <h5 class="card-title">Fusionadora</h5>
+          <p class="card-text">Esto es una card hecha con boostrap 5 y este texto simula información sobre la
+            herramienta de la foto.</p>
+          <a href="pages/herramienta.html#info">Leer mas</a>
+        </div>
+      </div>
+    </section>
+    <!-------------------TOOLS SECTION END------------------->
+
+    <!-------------------FORM SECTION START------------------->
+    <section class="formSection" id="form" method="post">
+      <h2>Comunicate con nosotros</h2>
+      <form action="#">
+        <!---------------INPUTS START--------------->
+        <div class="formSection__inputsLeftGroup">
+          <div class="formSection__inputsLeftGroup__inputContainer">
+            <label for="user"></label><img src="assets/Icons/user.svg" alt="Icono de usuario" />
+
+            <input type="text" id="user" name="user_name" placeholder="Nombre" required tabindex="0"/>
+          </div>
+
+          <div class="formSection__inputsLeftGroup__inputContainer">
+            <label for="mail"></label><img src="assets/Icons/mail.svg" alt="Icono de correo" />
+
+            <input type="email" id="mail" name="user_mail" placeholder="Email" required tabindex="0"/>
+          </div>
+
+          <div class="formSection__inputsLeftGroup__inputContainer">
+            <label for="phone"></label><img src="assets/Icons/phone.svg" alt="Icono de teléfono" />
+
+            <input type="tel" id="phone" name="user_phone" placeholder="Teléfono" required tabindex="0"/>
+          </div>
+        </div>
+
+        <div class="
+              formSection__inputsLeftGroup__inputContainer formSection__textarea
+            ">
+          <label for="message"></label><img src="assets/Icons/message.svg" alt="Icono de mensaje" />
+
+          <textarea name="user_message" id="message" cols="26" rows="10" wrap="hard" placeholder="Message"
+            required tabindex="0"></textarea>
+        </div>
+        <!---------------INPUTS START--------------->
+
+        <!---------------CHECKBOX START--------------->
+        <div class="formSection__checkbox">
+          <h3>Temas relacionados al mensaje:</h3>
+
+          <div class="formSection__checkbox__item">
+            <input type="checkbox" name="vague-content" id="optionOne" tabindex="0"/>
+            <label for="optionOne">El contenido de la página es vago</label>
+          </div>
+
+          <div class="formSection__checkbox__item">
+            <input type="checkbox" name="dificult-content" id="optionTwo" tabindex="0"/>
+            <label for="optionTwo">No se entiende la información</label>
+          </div>
+
+          <div class="formSection__checkbox__item">
+            <input type="checkbox" name="posible-upgrades" id="optionThree" tabindex="0"/>
+            <label for="optionThree">Posibles mejoras</label>
+          </div>
+
+          <div class="formSection__checkbox__item">
+            <input type="checkbox" name="personal" id="optionFour" tabindex="0"/>
+            <label for="optionFour">Consulta personal</label>
+          </div>
+        </div>
+        <!---------------CHECKBOX END--------------->
+
+        <!---------------SELECT START--------------->
+        <div class="formSection__selection">
+          <h3 class="formSection__selection--title">
+            ¿Te fue útil la Información?
+          </h3>
+
+          <select id="selection" tabindex="0">
+            <option value="select" tabindex="0">Seleccione una opción</option>
+            <option value="poco" tabindex="0">Me sabía la mayoría</option>
+            <option value="algo" tabindex="0">
+              Me ayudo a reforzar algunos conceptos
+            </option>
+            <option value="mucho" tabindex="0">
+              Me ayudo a entender un poco mejor el tema
+            </option>
+          </select>
+
+          <div class="form__buttons">
+            <button type="reset" class="form__buttons--reset" tabindex="0">RESET</button>
+            <button type="submit" class="form__buttons--send" tabindex="0">ENVIAR!</button>
+          </div>
+        </div>
+        <!---------------SELECT END--------------->
+      </form>
+    </section>
+    <!-------------------FORM SECTION END------------------->
+  </main>
+  <!-------------------FOOTER START------------------->
+  <footer class="footerSection">
+    <p>&COPY; Copyright | Francisco Muñiz</p>
+
+    <div class="footerSection__technologies">
+      <p>Tecnologías utilizadas:</p>
+      <img src="assets/Images/htmlLogo.png" alt="HTML" />
+      <img src="assets/Images/cssLogo.svg" alt="CSS" />
+    </div>
+  </footer>
+  <!-------------------FOOTER END------------------->
+  <script src="bootstrap.min.js"></script>
+</body>
+
+</html>

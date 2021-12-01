@@ -1,0 +1,619 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+.clearFix {
+  float: none;
+  clear: both; }
+
+body {
+  background-color: #3a3a3a;
+  margin: 0;
+  padding: 0;
+  width: 100%; }
+
+ol,
+ul,
+a {
+  text-decoration: none;
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+
+header {
+  display: flex;
+  flex-direction: column;
+  height: 110px;
+  width: 100%;
+  background-color: #fbbf65; }
+  header .header__brandLogo {
+    position: absolute;
+    height: 65px;
+    width: 100%;
+    background-color: #fbbf65; }
+    header .header__brandLogo .header__brandLogo--img {
+      background-color: #fff;
+      height: 45px;
+      width: 45px;
+      position: absolute;
+      border-radius: 50%;
+      margin: 7px 4%;
+      background-image: url(../assets/Icons/logo.svg);
+      background-position: center;
+      background-size: contain;
+      border: 3px solid #3a3a3a;
+      animation-name: moveXandRotate;
+      animation-duration: 2s; }
+    header .header__brandLogo .header__brandLogo--brand {
+      text-align: center;
+      line-height: 15px;
+      margin-top: 25px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 48px;
+      color: #3a3a3a;
+      animation: viene 2s; }
+  header .header__menu {
+    width: 100%;
+    padding-top: 65px;
+    height: 30px; }
+    header .header__menu ul {
+      display: flex;
+      width: 100%;
+      height: 45px;
+      justify-content: space-evenly;
+      background-color: #fff;
+      color: #3a3a3a; }
+      header .header__menu ul li {
+        font-family: PT Sans;
+        text-decoration: none;
+        list-style: none;
+        font-size: 12px;
+        margin-top: 15px;
+        height: 8vh; }
+        header .header__menu ul li .header__menu--item {
+          color: #3a3a3a; }
+
+@keyframes moveXandRotate {
+  0% {
+    opacity: 0;
+    margin-left: 7px; }
+  25% {
+    opacity: .5;
+    margin-left: 50px;
+    rotate: 180; }
+  50% {
+    opacity: 1;
+    margin-left: 7px;
+    rotate: 180; }
+  100% { } }
+
+@keyframes viene {
+  0% {
+    opacity: 0;
+    transform: translateX(500px); }
+  100% {
+    opacity: 1;
+    translate: translateX(0); } }
+
+.infoSection {
+  width: 84%;
+  margin-left: 8%;
+  margin-top: 20px; }
+  .infoSection aside h2 {
+    color: #fff;
+    font-size: 25px;
+    text-align: center; }
+
+.navigation {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 15px;
+  border-left: 2px solid #000000;
+  border-right: 2px solid #000000;
+  border-bottom: 2px solid #000000; }
+  .navigation ul .navigation__item span {
+    background-color: #fbbf65;
+    display: block;
+    line-height: 25px;
+    border-top: 2px solid #000000;
+    border-bottom: 2px solid #000000;
+    font-size: 18px;
+    text-align: center;
+    cursor: pointer; }
+  .navigation ul .navigation__item .navigation__item__content {
+    width: calc(100%-200px);
+    margin-left: 5%; }
+    .navigation ul .navigation__item .navigation__item__content .navigation__item__content--title {
+      line-height: 40px;
+      font-size: 18px;
+      background-color: #fff;
+      border: none; }
+    .navigation ul .navigation__item .navigation__item__content #carouselExampleIndicators {
+      width: 260px;
+      height: 300px;
+      background-color: #fff;
+      border-radius: 7%;
+      border: 1px solid #3a3a3a;
+      overflow: hidden;
+      margin: 0 auto;
+      margin-bottom: 30px; }
+    .navigation ul .navigation__item .navigation__item__content .carousel-item {
+      margin-top: 15px; }
+  .navigation ul .navigation__item:first-of-type span {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px; }
+
+.toolSection {
+  margin-top: 30px;
+  background-color: #fff;
+  width: 84%;
+  height: 600px;
+  margin-left: 8%;
+  border-radius: 25px;
+  border-right: 1px solid #000000;
+  border-left: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  overflow: auto;
+  column-gap: 20px;
+  row-gap: 20px; }
+  .toolSection h2 {
+    background-color: #fbbf65;
+    display: block;
+    width: 84%;
+    z-index: 10;
+    text-align: center;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    margin-top: 0;
+    position: absolute; }
+  .toolSection .card {
+    margin: 0 auto;
+    margin-top: 70px;
+    border: 1px solid #3a3a3a;
+    background-color: #fbbf65;
+    height: 450px;
+    border-radius: 25px; }
+    .toolSection .card .card-img-top {
+      width: 200px;
+      height: 200px;
+      margin: 30px auto 10px;
+      border: 1px solid #3a3a3a;
+      border-radius: 15px; }
+
+.formSection {
+  margin-top: 30px;
+  background-color: #fff;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: auto;
+  padding-bottom: 30px;
+  padding-top: 100px; }
+  .formSection h2 {
+    line-height: 50px;
+    text-align: center;
+    font-size: 28px;
+    font-family: PT Sans;
+    position: absolute;
+    margin-top: -70px; }
+  .formSection form .formSection__inputsLeftGroup {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    margin-bottom: 10px; }
+    .formSection form .formSection__inputsLeftGroup .formSection__inputsLeftGroup__inputContainer img {
+      position: absolute;
+      margin-top: 30px;
+      width: 45px;
+      height: 45px;
+      margin-left: 7px; }
+    .formSection form .formSection__inputsLeftGroup .formSection__inputsLeftGroup__inputContainer input {
+      margin-left: 60px;
+      margin-top: 40px;
+      width: 200px; }
+  .formSection form .formSection__textarea {
+    margin-left: calc(50% - 80px);
+    margin-top: 30px; }
+    .formSection form .formSection__textarea img {
+      margin-left: -50px;
+      margin-top: 0px;
+      width: 45px;
+      height: 45px; }
+  .formSection form .formSection__checkbox {
+    margin-top: 40px; }
+    .formSection form .formSection__checkbox h3 {
+      text-align: center;
+      font-family: PT Sans;
+      font-size: 18px; }
+    .formSection form .formSection__checkbox .formSection__checkbox__item {
+      width: 91%;
+      margin-top: 10px;
+      margin-left: calc(50% - 120px); }
+  .formSection form .formSection__selection {
+    margin-top: 40px; }
+    .formSection form .formSection__selection .formSection__selection--title {
+      text-align: center;
+      font-family: PT Sans;
+      font-size: 18px; }
+    .formSection form .formSection__selection #selection {
+      display: block;
+      width: 280px;
+      height: 40px;
+      border-radius: 15px;
+      margin: 0 auto;
+      background-color: #fbbf65;
+      border: 1px solid #000000; }
+    .formSection form .formSection__selection .form__buttons {
+      margin-top: 25px;
+      display: flex;
+      justify-content: space-evenly; }
+      .formSection form .formSection__selection .form__buttons .form__buttons--reset {
+        background-color: #3a3a3a;
+        color: #fff;
+        border: none;
+        padding: 6px 15px;
+        border-radius: 10px;
+        font-size: 17px;
+        font-family: PT Sans; }
+      .formSection form .formSection__selection .form__buttons .form__buttons--send {
+        background-color: #fbbf65;
+        color: #3a3a3a;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 15px;
+        font-size: 17px;
+        font-family: PT Sans;
+        font-weight: bold;
+        box-shadow: -1px -2px 5px #ff9900 inset;
+        animation: moving 6s ease-out infinite; }
+
+@keyframes moving {
+  0% {
+    box-shadow: -1px -2px 5px #ff9900 inset;
+    transform: translateY(0px); }
+  25% {
+    box-shadow: -7px -7px 5px #ff9900 inset;
+    transform: translateY(-20px); }
+  50% {
+    box-shadow: -1px -2px 5px #ff9900 inset;
+    transform: translateY(0px); }
+  100% { } }
+
+.footerSection {
+  margin-top: 30px;
+  background-color: #fbbf65;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  overflow: hidden; }
+  .footerSection > p {
+    width: 250px;
+    height: 30px;
+    text-align: center;
+    font-size: 14px;
+    border-bottom: 1px solid #3a3a3a; }
+  .footerSection .footerSection__technologies {
+    width: 300px;
+    margin-left: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .footerSection .footerSection__technologies p {
+      display: inline-block; }
+    .footerSection .footerSection__technologies img {
+      display: inline-block;
+      width: 40px;
+      height: 40px; }
+
+.toolsInfo {
+  width: 90%;
+  height: 84.5vh;
+  margin-left: 5%;
+  padding-right: 5%;
+  background-color: #3a3a3a;
+  border-bottom-left-radius: 50px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column; }
+  .toolsInfo h1 {
+    font-size: 36px;
+    padding-left: 200px;
+    width: 30%;
+    color: #fff;
+    display: block;
+    width: 40%; }
+  .toolsInfo p {
+    color: #fff;
+    width: 50%;
+    display: inline-block; }
+  .toolsInfo .toolsInfo__content {
+    width: 64%;
+    padding-left: 60px; }
+    .toolsInfo .toolsInfo__content h2 {
+      font-size: 25px;
+      margin-top: 35px;
+      margin-bottom: 5px;
+      color: #fff;
+      display: block;
+      width: 40%; }
+  .toolsInfo .toolsInfo--sliderCont {
+    position: absolute;
+    margin: 7% 0 0 58%;
+    height: 770px;
+    width: 400px; }
+    .toolsInfo .toolsInfo--sliderCont h3 {
+      display: block;
+      text-align: center;
+      border-top-left-radius: 40px;
+      border-top-right-radius: 40px;
+      color: #3a3a3a;
+      font-family: PT Sans;
+      background-color: #fbbf65; }
+    .toolsInfo .toolsInfo--sliderCont .toolsInfo--slider {
+      display: block;
+      height: 480px;
+      margin-top: -18px;
+      border-bottom-left-radius: 40px;
+      border-bottom-right-radius: 40px;
+      background-color: #fff;
+      background-image: url(../assets/Images/fibraOptica.jpg);
+      background-size: contain;
+      background-repeat: no-repeat; }
+
+/* ----------------------------------------------------Vista Tablet-------------------------- */
+@media screen and (min-device-width: 712px) {
+  .toolSection {
+    padding-top: 60px;
+    height: 800px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly; }
+    .toolSection h2 {
+      margin-top: -60px;
+      height: 40px;
+      line-height: 40px; }
+    .toolSection .card {
+      margin: 0;
+      margin-top: 10px; }
+  .formSection {
+    width: 100%; }
+    .formSection > form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+      row-gap: 20px;
+      padding: 0 20px; }
+      .formSection > form .formSection__inputsLeftGroup {
+        display: flex;
+        flex-direction: column;
+        row-gap: 15px; }
+        .formSection > form .formSection__inputsLeftGroup .formSection__inputsLeftGroup__inputContainer {
+          display: flex;
+          column-gap: 10px; }
+          .formSection > form .formSection__inputsLeftGroup .formSection__inputsLeftGroup__inputContainer input {
+            width: 250px;
+            font-size: 16px;
+            font-family: PT Sans;
+            border-bottom: 1px solid #3a3a3a;
+            border-left: none;
+            color: #a1a0a0;
+            border-top: #a1a0a0;
+            border-right: #a1a0a0; }
+          .formSection > form .formSection__inputsLeftGroup .formSection__inputsLeftGroup__inputContainer img {
+            width: 45px; }
+        .formSection > form .formSection__inputsLeftGroup .formSection__textarea textarea {
+          border-bottom: 1px solid #3a3a3a;
+          border-left: 1px solid #3a3a3a;
+          color: #a1a0a0;
+          border-top: #a1a0a0;
+          border-right: #a1a0a0;
+          height: 185px;
+          width: 300px;
+          font-size: 18px; }
+      .formSection > form .formSection__checkbox h3 {
+        font-family: PT Sans;
+        color: #3a3a3a;
+        font-size: 20px;
+        margin-top: -10px; }
+      .formSection > form .formSection__selection {
+        margin-top: 15px;
+        display: flex;
+        flex-direction: column; }
+        .formSection > form .formSection__selection #selection {
+          width: 360px;
+          height: 30px;
+          margin-top: 15px;
+          border-radius: 8px; }
+        .formSection > form .formSection__selection .form__buttons .form__buttons--reset,
+        .formSection > form .formSection__selection .form__buttons .form__buttons--send {
+          height: 35px;
+          padding: 0 20px;
+          margin-left: 10px;
+          margin-bottom: 10px;
+          margin-top: 50px;
+          border-radius: 10px;
+          border: none; }
+        .formSection > form .formSection__selection .form__buttons .form__buttons--reset {
+          margin-left: 27%; }
+        .formSection > form .formSection__selection .form__buttons .form__buttons--send {
+          background-color: #fbbf65;
+          padding: 0 30px; }
+  .formSection__checkbox__item label,
+  .formSection__selection--title {
+    font-family: PT Sans;
+    font-size: 15px;
+    color: #a1a0a0;
+    font-weight: 100; }
+  .footerSection > p {
+    border: none;
+    line-height: 30px; } }
+
+/* ----------------------------------------------------Vista Tablet Acostada-------------------------- */
+@media screen and (min-device-width: 1188px) {
+  header {
+    flex-direction: row;
+    height: 70px; }
+    header .header__brandLogo {
+      width: 45%;
+      text-align: right;
+      padding-left: 10%; }
+      header .header__brandLogo .header__brandLogo--img {
+        width: 50px;
+        height: 50px; }
+    header .header__menu {
+      padding: 0;
+      width: 35%;
+      background-color: #fbbf65;
+      color: #3a3a3a;
+      margin-left: 60%;
+      line-height: 40px;
+      z-index: 2; }
+      header .header__menu ul {
+        background-color: #fbbf65;
+        justify-content: space-between;
+        margin-top: 0px; }
+        header .header__menu ul li {
+          font-size: 20px; }
+  .navigation .navigation__item .navigation__item__content .navigation__item__content--title,
+  .navigation .navigation__item .navigation__item__content p {
+    width: 453px; }
+  .navigation .navigation__item .navigation__item__content .navigation__item__content--title {
+    font-size: 20px;
+    line-height: 50px; }
+  .navigation .navigation__item .navigation__item__content #carouselExampleIndicators {
+    width: 300px;
+    height: 350px;
+    background-color: #fff;
+    border-radius: 7%;
+    overflow: hidden;
+    position: absolute;
+    margin: -360px 0 0 49% !important; }
+  .toolSection {
+    padding-top: 60px;
+    height: auto;
+    padding-bottom: 40px; }
+    .toolSection h2 {
+      margin-top: -60px;
+      height: 40px;
+      line-height: 40px; }
+    .toolSection .card {
+      width: 220px;
+      height: 450px; }
+  .formSection {
+    width: 92%;
+    margin-left: 8%; }
+    .formSection form {
+      column-gap: 90px; } }
+
+/* ----------------------------------------------------Vista Computadora-------------------------- */
+@media screen and (min-device-width: 1440px) {
+  .infoSection {
+    margin-top: 0;
+    width: 93%;
+    height: 900px;
+    margin-left: 7%;
+    padding-right: 5%;
+    background-color: #fff;
+    overflow: auto; }
+    .infoSection aside h2 {
+      font-family: PT Sans;
+      font-size: 28px;
+      text-align: left;
+      color: #3a3a3a; }
+    .infoSection aside .navigation {
+      line-height: 60px;
+      border: none;
+      margin-top: 50px; }
+      .infoSection aside .navigation ul .navigation__item span {
+        background-color: #fff;
+        color: #3a3a3a;
+        margin-left: 5px;
+        border: none;
+        text-align: left;
+        line-height: 60px; }
+      .infoSection aside .navigation ul .navigation__item .navigation__item__content {
+        display: none;
+        background-color: #3a3a3a; }
+        .infoSection aside .navigation ul .navigation__item .navigation__item__content .navigation__item__content--title {
+          margin-left: 78px;
+          margin-top: 25px; }
+        .infoSection aside .navigation ul .navigation__item .navigation__item__content p {
+          line-height: 20px;
+          width: 470px;
+          height: 185px;
+          margin-left: 80px;
+          color: #fff;
+          padding: 7px;
+          border: 1px solid #fff;
+          box-shadow: 1px 1px 1px #fff, 2px 2px 1px #fff, 3px 3px 1px #fff;
+          margin-bottom: 60px; }
+        .infoSection aside .navigation ul .navigation__item .navigation__item__content p:last-of-type {
+          height: 70px; }
+        .infoSection aside .navigation ul .navigation__item .navigation__item__content #carouselExampleIndicators {
+          width: 400px;
+          height: 520px;
+          background-color: #fff;
+          border-radius: 7%;
+          overflow: hidden;
+          position: absolute;
+          margin: -650px 0 0 55% !important; }
+      .infoSection aside .navigation ul .navigation__item--active {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between; }
+        .infoSection aside .navigation ul .navigation__item--active > span {
+          color: #fff;
+          background-color: #3a3a3a;
+          border-top-left-radius: 25px;
+          border-bottom-left-radius: 25px;
+          padding-left: 15px; }
+        .infoSection aside .navigation ul .navigation__item--active > .navigation__item__content {
+          display: initial;
+          position: absolute;
+          width: 73%;
+          margin-top: -117px;
+          margin-left: 20%;
+          padding-top: 30px;
+          width: 73%;
+          height: 84vh;
+          border-bottom-left-radius: 80px; }
+  .toolSection {
+    background-color: #fff;
+    margin-top: 0;
+    height: auto;
+    padding: 150px 160px 30px 160px;
+    width: 93.05%;
+    margin-left: 6.95%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    border-radius: 0 0 0 50px;
+    padding-bottom: 30px; }
+    .toolSection h2 {
+      position: absolute;
+      margin-top: -100px;
+      background-color: #fff;
+      line-height: 50px;
+      font-size: 35px;
+      font-family: PT Sans;
+      border: none; }
+  .formSection {
+    width: 92%;
+    border-radius: 0;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    margin: 50px 0; } }

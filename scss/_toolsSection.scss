@@ -1,0 +1,47 @@
+@import "variables.scss";
+
+.toolSection {
+  margin-top: 30px;
+  background-color: $color-terciario;
+  width: 84%;
+  height: 600px;
+  margin-left: 8%;
+  border-radius: 25px;
+  border-right: 1px solid #000000;
+  border-left: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  overflow: auto;
+  column-gap: 20px;
+  row-gap: 20px;
+
+  h2 {
+    background-color: $color-primario;
+    display: block;
+    width: 84%;
+    z-index: 10;
+    text-align: center;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    margin-top: 0;
+    position: absolute;
+  }
+
+  .card {
+    margin: 0 auto;
+    margin-top: 70px;
+    border: 1px solid $color-secundario;
+    background-color: $color-primario;
+    height: 450px;
+    border-radius: 25px;
+
+    .card-img-top {
+      width: 200px;
+      height: 200px;
+      margin: 30px auto 10px;
+      border: 1px solid $color-secundario;
+      border-radius: 15px;
+    }
+  }
+}

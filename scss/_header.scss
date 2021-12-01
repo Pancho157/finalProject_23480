@@ -1,0 +1,102 @@
+@import 'variables.scss';
+
+header {
+    display: flex;
+    flex-direction: column;
+    height: 110px;
+    width: 100%;
+    background-color: $color-primario;
+    
+    .header__brandLogo {
+      position: absolute;
+      height: 65px;
+      width: 100%;
+      background-color: $color-primario;
+      
+      .header__brandLogo--img {
+        background-color: $color-terciario;
+        height: 45px;
+        width: 45px;
+        position: absolute;
+        border-radius: 50%;
+        margin: 7px 4%;
+        background-image: url(../assets/Icons/logo.svg);
+        background-position: center;
+        background-size: contain;
+        border: 3px solid $color-secundario;
+        animation-name: moveXandRotate;
+        animation-duration: 2s;
+      }
+
+      .header__brandLogo--brand {
+        text-align: center;
+        line-height: 15px;
+        margin-top: 25px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 48px;
+        color: $color-secundario;
+        animation: viene 2s;
+      }
+    }
+
+
+
+    .header__menu {
+      width: 100%;
+      padding-top: 65px;
+      height: 30px;
+
+      ul {
+        display: flex;
+        width: 100%;
+        height: 45px;
+        justify-content: space-evenly;
+        background-color: $color-terciario;
+        color: $color-secundario;
+
+        li {
+          font-family: PT Sans;
+          text-decoration: none;
+          list-style: none;
+          font-size: 12px;
+          margin-top: 15px;
+          height: 8vh;
+
+          .header__menu--item {
+            color: $color-secundario;
+          }
+        }
+      }
+    }
+  }
+  
+  
+  
+  @keyframes moveXandRotate {
+    0%{
+      opacity: 0;
+      margin-left: 7px;
+    }25%{
+      opacity: .5;
+      margin-left: 50px;
+      rotate: 180;
+    }50%{
+      opacity: 1;
+      margin-left: 7px;
+      rotate: 180;
+    }100%{}
+  }
+  
+  
+  @keyframes viene {
+    0%{
+      opacity: 0;
+      transform: translateX(500px);
+    }100%{
+      opacity: 1;
+      translate: translateX(0);
+    }
+  }
+  
+  
