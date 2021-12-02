@@ -286,6 +286,7 @@
                 box-shadow: 1px 1px 1px $color-terciario,
                   2px 2px 1px $color-terciario, 3px 3px 1px $color-terciario;
                 margin-bottom: 60px;
+                overflow: hidden;
               }
 
               p:last-of-type {
