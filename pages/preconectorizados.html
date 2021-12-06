@@ -49,9 +49,12 @@
         <div class="navigation">
           <ul>
             <!-------------------LI START------------------->
-            <li class="navigation__item navigation__item--active">
-              <span>¿Qué son los Conectores?</span>
-
+            <li class="navigation__item navigation__item--active" tabindex="0">
+              <b></b>
+              <b></b>
+              <a href="#">
+                <span class="navigation__item--title">¿Qué son los Conectores?</span>
+              </a>
               <!---- En el div content irá el contenido de los diferentes items del wireframe, ocultando todos exceptuando el activo ---->
               <div class="navigation__item__content">
                 <span class="navigation__item__content--title">¿Qué son los Conectores?</span>
@@ -113,9 +116,12 @@
             </li>
             <!-------------------LI END------------------->
             <!-------------------LI START------------------->
-            <li class="navigation__item">
-              <span>Tipos de Conectores</span>
-
+            <li class="navigation__item" tabindex="0">
+              <b></b>
+              <b></b>
+              <a href="#">
+                <span class="navigation__item--title">Tipos de Conectores</span>
+              </a>
               <!---- En el div content irá el contenido de los diferentes items del wireframe, ocultando todos exceptuando el activo ---->
               <div class="navigation__item__content">
                 <span class="navigation__item__content--title">Tipos de conectores</span>
@@ -180,9 +186,12 @@
             </li>
             <!-------------------LI END------------------->
             <!-------------------LI START------------------->
-            <li class="navigation__item">
-              <span>Tipos de pulidos</span>
-
+            <li class="navigation__item" tabindex="0">
+              <b></b>
+              <b></b>
+              <a href="#">
+                <span class="navigation__item--title">Tipos de pulidos</span>
+              </a>
               <!---- En el div content irá el contenido de los diferentes items del wireframe, ocultando todos exceptuando el activo ---->
               <div class="navigation__item__content">
                 <span class="navigation__item__content--title">Tipos de pulido</span>
@@ -244,9 +253,12 @@
             </li>
             <!-------------------LI END------------------->
             <!-------------------LI START------------------->
-            <li class="navigation__item">
-              <span>Incidencia de la suciedad</span>
-
+            <li class="navigation__item" tabindex="0">
+              <b></b>
+              <b></b>
+              <a href="#">
+                <span class="navigation__item--title">Incidencia de la suciedad</span>
+              </a>
               <!---- En el div content irá el contenido de los diferentes items del wireframe, ocultando todos exceptuando el activo ---->
               <div class="navigation__item__content">
                 <span class="navigation__item__content--title">¿Qué tanto incide la suciedad en un conector?</span>
@@ -307,9 +319,12 @@
             </li>
             <!-------------------LI END------------------->
             <!-------------------LI START------------------->
-            <li class="navigation__item">
-              <span>Patch cords y pigtails</span>
-
+            <li class="navigation__item" tabindex="0">
+              <b></b>
+              <b></b>
+              <a href="#">
+                <span class="navigation__item--title">Patch cords y pigtails</span>
+              </a>
               <!---- En el div content irá el contenido de los diferentes items del wireframe, ocultando todos exceptuando el activo ---->
               <div class="navigation__item__content">
                 <span class="navigation__item__content--title">¿Qué son los patch cords?</span>
@@ -373,9 +388,12 @@
             </li>
             <!-------------------LI END------------------->
             <!-------------------LI START------------------->
-            <li class="navigation__item">
-              <span>Limpieza</span>
-
+            <li class="navigation__item" tabindex="0">
+              <b></b>
+              <b></b>
+              <a href="#">
+                <span class="navigation__item--title">Limpieza</span>
+              </a>
               <!---- En el div content irá el contenido de los diferentes items del wireframe, ocultando todos exceptuando el activo ---->
               <div class="navigation__item__content">
                 <span class="navigation__item__content--title">¿Por qué es tán importante?</span>
@@ -499,6 +517,21 @@
     </div>
   </footer>
   <!-------------------FOOTER END------------------->
+
+  <!--Este script hace que se cambie la clase "active" según el span en el cual se hace el click en la infoSection-->
+  <script>
+    let list = document.querySelectorAll('.navigation__item');
+    for (let i = 0; i < list.length; i++) {
+      list[i].onclick = function () {
+        let j = 0;
+        while (j < list.length) {
+          list[j++].className = 'navigation__item';
+        }
+        list[i].className = 'navigation__item navigation__item--active'
+      }
+    }
+  </script>
+
   <script src="bootstrap.min.js"></script>
 </body>
 

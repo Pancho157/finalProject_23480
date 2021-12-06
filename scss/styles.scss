@@ -230,6 +230,37 @@
   }
 }
 
+
+/* ----------Corrección para la sección de información en la sección de información en la página de herramientas----------- */
+@media screen and (min-device-width: 1250px) {
+  .toolsInfo{
+    h1{
+      width: 30%;
+      padding-left: 200px;
+    }
+
+    .toolsInfo__content{
+      width: 64%;
+
+      p{
+        width: 75%;
+      }
+    }
+  }
+
+  #tools{
+    border-top-left-radius: 50px;
+  }
+
+  #carouselExampleIndicators{
+    position: absolute;
+    top: 200px;
+    right: 15%;
+    width: 400px !important;
+    height: 520px !important;
+  }
+}
+
 /* ----------------------------------------------------Vista Computadora-------------------------- */
 
 @media screen and (min-device-width: 1440px) {
@@ -257,6 +288,53 @@
 
         ul {
           .navigation__item {
+            position: relative;
+            list-style: none;
+            width: 100%;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+
+            b:nth-child(1) {
+              position: absolute;
+              top: -20px;
+              height: 20px;
+              width: 100%;
+              background: #3a3a3a;
+              display: none;
+            }
+
+            b:nth-child(1)::before {
+              content: "";
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 20%;
+              height: 100%;
+              border-bottom-right-radius: 20px;
+              background: $color-terciario;
+            }
+
+            b:nth-child(2) {
+              position: absolute;
+              bottom: -20px;
+              height: 20px;
+              width: 100%;
+              background: $color-secundario;
+              display: none;
+              z-index: 1;
+            }
+
+            b:nth-child(2)::before {
+              content: "";
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 20%;
+              height: 100%;
+              border-top-right-radius: 20px;
+              background: $color-terciario;
+            }
+
             span {
               background-color: $color-terciario;
               color: $color-secundario;
@@ -271,26 +349,29 @@
               background-color: $color-secundario;
 
               .navigation__item__content--title {
-                margin-left: 78px;
+                margin-left: 80px;
                 margin-top: 25px;
+                border-top-left-radius: 15px;
+                border-top-right-radius: 15px;
               }
 
               p {
                 line-height: 20px;
                 width: 470px;
-                height: 185px;
+                height: 180px;
                 margin-left: 80px;
                 color: $color-terciario;
-                padding: 7px;
+                padding: 15px;
                 border: 1px solid $color-terciario;
                 box-shadow: 1px 1px 1px $color-terciario,
                   2px 2px 1px $color-terciario, 3px 3px 1px $color-terciario;
-                margin-bottom: 60px;
+                margin-bottom: 40px;
                 overflow: hidden;
               }
 
               p:last-of-type {
-                height: 70px;
+                height:106px;
+                padding: 15px;
               }
 
               #carouselExampleIndicators {
@@ -306,34 +387,79 @@
           }
 
           .navigation__item--active {
+            background-color: $color-secundario;
             display: flex;
             flex-direction: column;
             flex-wrap: wrap;
             justify-content: space-between;
 
-            > span {
-              color: $color-terciario;
-              background-color: $color-secundario;
-              border-top-left-radius: 25px;
-              border-bottom-left-radius: 25px;
-              padding-left: 15px;
+            b:nth-child(1),
+            b:nth-child(2) {
+              display: block;
+            }
+
+            > a {
+              span {
+                color: $color-terciario;
+                background-color: $color-secundario;
+                border-top-left-radius: 25px;
+                border-bottom-left-radius: 25px;
+                padding-left: 15px;
+                margin-left: 20px;
+              }
             }
 
             > .navigation__item__content {
               display: initial;
               position: absolute;
               width: 73%;
-              margin-top: -117px;
               margin-left: 20%;
-              padding-top: 30px;
-              width: 73%;
-              height: 84vh;
+              width: 85.7%;
+              height: 83vh;
               border-bottom-left-radius: 80px;
+              z-index: 2;
+
+              .navigation__item__content--title:first-of-type{
+                margin-top: 60px;
+              }
             }
           }
         }
       }
     }
+  }
+
+  /* Esta sección del código se encarga de alinear en altura los contenidos de los aside */
+  .navigation ul li:nth-of-type(1) .navigation__item__content {
+    margin-top: -117px;
+  }
+
+  .navigation ul li:nth-of-type(2) .navigation__item__content {
+    margin-top: -177px;
+  }
+
+  .navigation ul li:nth-of-type(3) .navigation__item__content {
+    margin-top: -237px;
+  }
+
+  .navigation ul li:nth-of-type(4) .navigation__item__content {
+    margin-top: -297px;
+  }
+
+  .navigation ul li:nth-of-type(5) .navigation__item__content {
+    margin-top: -357px;
+  }
+
+  .navigation ul li:nth-of-type(6) .navigation__item__content {
+    margin-top: -417px;
+  }
+
+  .navigation ul li:nth-of-type(7) .navigation__item__content {
+    margin-top: -477px;
+  }
+
+  .navigation ul li:nth-of-type(8) .navigation__item__content {
+    margin-top: -537px;
   }
 
   .toolSection {

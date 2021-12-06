@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
@@ -143,6 +144,10 @@ header {
       margin-bottom: 30px; }
     .navigation ul .navigation__item .navigation__item__content .carousel-item {
       margin-top: 15px; }
+      .navigation ul .navigation__item .navigation__item__content .carousel-item .w-100 {
+        max-width: 260px;
+        max-height: 290px;
+        margin: 0 auto; }
   .navigation ul .navigation__item:first-of-type span {
     border-top-left-radius: 15px;
     border-top-right-radius: 15px; }
@@ -318,9 +323,10 @@ header {
 
 .toolsInfo {
   width: 90%;
-  height: 84.5vh;
+  height: auto;
   margin-left: 5%;
   padding-right: 5%;
+  padding-bottom: 40px;
   background-color: #3a3a3a;
   border-bottom-left-radius: 50px;
   overflow: hidden;
@@ -328,48 +334,40 @@ header {
   flex-direction: column; }
   .toolsInfo h1 {
     font-size: 36px;
-    padding-left: 200px;
-    width: 30%;
+    text-align: center;
+    width: 100%;
     color: #fff;
     display: block;
-    width: 40%; }
-  .toolsInfo p {
-    color: #fff;
-    width: 50%;
-    display: inline-block; }
+    margin-top: 40px; }
   .toolsInfo .toolsInfo__content {
-    width: 64%;
+    width: 100%;
     padding-left: 60px; }
     .toolsInfo .toolsInfo__content h2 {
       font-size: 25px;
       margin-top: 35px;
-      margin-bottom: 5px;
-      color: #fff;
-      display: block;
-      width: 40%; }
-  .toolsInfo .toolsInfo--sliderCont {
-    position: absolute;
-    margin: 7% 0 0 58%;
-    height: 770px;
-    width: 400px; }
-    .toolsInfo .toolsInfo--sliderCont h3 {
-      display: block;
-      text-align: center;
-      border-top-left-radius: 40px;
-      border-top-right-radius: 40px;
+      margin-bottom: 0px;
       color: #3a3a3a;
-      font-family: PT Sans;
-      background-color: #fbbf65; }
-    .toolsInfo .toolsInfo--sliderCont .toolsInfo--slider {
-      display: block;
-      height: 480px;
-      margin-top: -18px;
-      border-bottom-left-radius: 40px;
-      border-bottom-right-radius: 40px;
       background-color: #fff;
-      background-image: url(../assets/Images/fibraOptica.jpg);
-      background-size: contain;
-      background-repeat: no-repeat; }
+      display: block;
+      width: 50%;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px; }
+    .toolsInfo .toolsInfo__content p {
+      color: #fff;
+      width: 100%;
+      display: inline-block;
+      border: 1px solid #fff;
+      box-shadow: 1px 1px 1px #fff, 2px 2px 1px #fff, 3px 3px 1px #fff;
+      margin-top: 0; }
+  .toolsInfo #carouselExampleIndicators {
+    width: 300px;
+    height: 420px;
+    background-color: #fff;
+    border-radius: 7%;
+    overflow: hidden;
+    margin: 30px auto 0; }
+    .toolsInfo #carouselExampleIndicators .carousel-inner .carousel-item {
+      margin: 0 auto; }
 
 /* ----------------------------------------------------Vista Tablet-------------------------- */
 @media screen and (min-device-width: 712px) {
@@ -517,6 +515,24 @@ header {
     .formSection form {
       column-gap: 90px; } }
 
+/* ----------Corrección para la sección de información en la sección de información en la página de herramientas----------- */
+@media screen and (min-device-width: 1250px) {
+  .toolsInfo h1 {
+    width: 30%;
+    padding-left: 200px; }
+  .toolsInfo .toolsInfo__content {
+    width: 64%; }
+    .toolsInfo .toolsInfo__content p {
+      width: 75%; }
+  #tools {
+    border-top-left-radius: 50px; }
+  #carouselExampleIndicators {
+    position: absolute;
+    top: 200px;
+    right: 15%;
+    width: 400px !important;
+    height: 520px !important; } }
+
 /* ----------------------------------------------------Vista Computadora-------------------------- */
 @media screen and (min-device-width: 1440px) {
   .infoSection {
@@ -536,61 +552,126 @@ header {
       line-height: 60px;
       border: none;
       margin-top: 50px; }
-      .infoSection aside .navigation ul .navigation__item span {
-        background-color: #fff;
-        color: #3a3a3a;
-        margin-left: 5px;
-        border: none;
-        text-align: left;
-        line-height: 60px; }
-      .infoSection aside .navigation ul .navigation__item .navigation__item__content {
-        display: none;
-        background-color: #3a3a3a; }
-        .infoSection aside .navigation ul .navigation__item .navigation__item__content .navigation__item__content--title {
-          margin-left: 78px;
-          margin-top: 25px; }
-        .infoSection aside .navigation ul .navigation__item .navigation__item__content p {
-          line-height: 20px;
-          width: 470px;
-          height: 185px;
-          margin-left: 80px;
-          color: #fff;
-          padding: 7px;
-          border: 1px solid #fff;
-          box-shadow: 1px 1px 1px #fff, 2px 2px 1px #fff, 3px 3px 1px #fff;
-          margin-bottom: 60px;
-          overflow: hidden; }
-        .infoSection aside .navigation ul .navigation__item .navigation__item__content p:last-of-type {
-          height: 70px; }
-        .infoSection aside .navigation ul .navigation__item .navigation__item__content #carouselExampleIndicators {
-          width: 400px;
-          height: 520px;
-          background-color: #fff;
-          border-radius: 7%;
-          overflow: hidden;
+      .infoSection aside .navigation ul .navigation__item {
+        position: relative;
+        list-style: none;
+        width: 100%;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px; }
+        .infoSection aside .navigation ul .navigation__item b:nth-child(1) {
           position: absolute;
-          margin: -650px 0 0 55% !important; }
+          top: -20px;
+          height: 20px;
+          width: 100%;
+          background: #3a3a3a;
+          display: none; }
+        .infoSection aside .navigation ul .navigation__item b:nth-child(1)::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 20%;
+          height: 100%;
+          border-bottom-right-radius: 20px;
+          background: #fff; }
+        .infoSection aside .navigation ul .navigation__item b:nth-child(2) {
+          position: absolute;
+          bottom: -20px;
+          height: 20px;
+          width: 100%;
+          background: #3a3a3a;
+          display: none;
+          z-index: 1; }
+        .infoSection aside .navigation ul .navigation__item b:nth-child(2)::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 20%;
+          height: 100%;
+          border-top-right-radius: 20px;
+          background: #fff; }
+        .infoSection aside .navigation ul .navigation__item span {
+          background-color: #fff;
+          color: #3a3a3a;
+          margin-left: 5px;
+          border: none;
+          text-align: left;
+          line-height: 60px; }
+        .infoSection aside .navigation ul .navigation__item .navigation__item__content {
+          display: none;
+          background-color: #3a3a3a; }
+          .infoSection aside .navigation ul .navigation__item .navigation__item__content .navigation__item__content--title {
+            margin-left: 80px;
+            margin-top: 25px;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px; }
+          .infoSection aside .navigation ul .navigation__item .navigation__item__content p {
+            line-height: 20px;
+            width: 470px;
+            height: 180px;
+            margin-left: 80px;
+            color: #fff;
+            padding: 15px;
+            border: 1px solid #fff;
+            box-shadow: 1px 1px 1px #fff, 2px 2px 1px #fff, 3px 3px 1px #fff;
+            margin-bottom: 40px;
+            overflow: hidden; }
+          .infoSection aside .navigation ul .navigation__item .navigation__item__content p:last-of-type {
+            height: 106px;
+            padding: 15px; }
+          .infoSection aside .navigation ul .navigation__item .navigation__item__content #carouselExampleIndicators {
+            width: 400px;
+            height: 520px;
+            background-color: #fff;
+            border-radius: 7%;
+            overflow: hidden;
+            position: absolute;
+            margin: -650px 0 0 55% !important; }
       .infoSection aside .navigation ul .navigation__item--active {
+        background-color: #3a3a3a;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
         justify-content: space-between; }
-        .infoSection aside .navigation ul .navigation__item--active > span {
+        .infoSection aside .navigation ul .navigation__item--active b:nth-child(1),
+        .infoSection aside .navigation ul .navigation__item--active b:nth-child(2) {
+          display: block; }
+        .infoSection aside .navigation ul .navigation__item--active > a span {
           color: #fff;
           background-color: #3a3a3a;
           border-top-left-radius: 25px;
           border-bottom-left-radius: 25px;
-          padding-left: 15px; }
+          padding-left: 15px;
+          margin-left: 20px; }
         .infoSection aside .navigation ul .navigation__item--active > .navigation__item__content {
           display: initial;
           position: absolute;
           width: 73%;
-          margin-top: -117px;
           margin-left: 20%;
-          padding-top: 30px;
-          width: 73%;
-          height: 84vh;
-          border-bottom-left-radius: 80px; }
+          width: 85.7%;
+          height: 83vh;
+          border-bottom-left-radius: 80px;
+          z-index: 2; }
+          .infoSection aside .navigation ul .navigation__item--active > .navigation__item__content .navigation__item__content--title:first-of-type {
+            margin-top: 60px; }
+  /* Esta sección del código se encarga de alinear en altura los contenidos de los aside */
+  .navigation ul li:nth-of-type(1) .navigation__item__content {
+    margin-top: -117px; }
+  .navigation ul li:nth-of-type(2) .navigation__item__content {
+    margin-top: -177px; }
+  .navigation ul li:nth-of-type(3) .navigation__item__content {
+    margin-top: -237px; }
+  .navigation ul li:nth-of-type(4) .navigation__item__content {
+    margin-top: -297px; }
+  .navigation ul li:nth-of-type(5) .navigation__item__content {
+    margin-top: -357px; }
+  .navigation ul li:nth-of-type(6) .navigation__item__content {
+    margin-top: -417px; }
+  .navigation ul li:nth-of-type(7) .navigation__item__content {
+    margin-top: -477px; }
+  .navigation ul li:nth-of-type(8) .navigation__item__content {
+    margin-top: -537px; }
   .toolSection {
     background-color: #fff;
     margin-top: 0;

@@ -49,9 +49,12 @@
         <div class="navigation">
           <ul>
             <!-------------------LI START------------------->
-            <li class="navigation__item navigation__item--active">
-              <span>¿Qué son las fusiones de fibra?</span>
-
+            <li class="navigation__item navigation__item--active" tabindex="0">
+              <b></b>
+              <b></b>
+              <a href="#">
+                <span class="navigation__item--title">¿Qué son las fusiones de fibra?</span>
+              </a>
               <!---- En el div content irá el contenido de los diferentes items del wireframe, ocultando todos exceptuando el activo ---->
               <div class="navigation__item__content">
                 <span class="navigation__item__content--title">¿Qué son las fusiones de fibra?</span>
@@ -131,9 +134,12 @@
             </li>
             <!-------------------LI END------------------->
             <!-------------------LI START------------------->
-            <li class="navigation__item">
-              <span>¿Para que sirven?</span>
-
+            <li class="navigation__item" tabindex="0">
+              <b></b>
+              <b></b>
+              <a href="#">
+                <span class="navigation__item--title">¿Para que sirven?</span>
+              </a>
               <!---- En el div content irá el contenido de los diferentes items del wireframe, ocultando todos exceptuando el activo ---->
               <div class="navigation__item__content">
                 <span class="navigation__item__content--title">¿Para qué sirve una fusión de FO?</span>
@@ -196,9 +202,12 @@
             </li>
             <!-------------------LI END------------------->
             <!-------------------LI START------------------->
-            <li class="navigation__item">
-              <span>Ventajas</span>
-
+            <li class="navigation__item" tabindex="0">
+              <b></b>
+              <b></b>
+              <a href="#">
+                <span class="navigation__item--title">Ventajas y Desventajas</span>
+              </a>
               <!---- En el div content irá el contenido de los diferentes items del wireframe, ocultando todos exceptuando el activo ---->
               <div class="navigation__item__content">
                 <span class="navigation__item__content--title">Ventajas</span>
@@ -255,9 +264,12 @@
             </li>
             <!-------------------LI END------------------->
             <!-------------------LI START------------------->
-            <li class="navigation__item">
-              <span>Incidencia de la suciedad</span>
-
+            <li class="navigation__item" tabindex="0">
+              <b></b>
+              <b></b>
+              <a href="#">
+                <span class="navigation__item--title">Incidencia de la suciedad</span>
+              </a>
               <!---- En el div content irá el contenido de los diferentes items del wireframe, ocultando todos exceptuando el activo ---->
               <div class="navigation__item__content">
                 <span class="navigation__item__content--title">¿Qué tanto incide la suciedad?</span>
@@ -320,9 +332,12 @@
             </li>
             <!-------------------LI END------------------->
             <!-------------------LI START------------------->
-            <li class="navigation__item">
-              <span>Atenuación y Reflexión</span>
-
+            <li class="navigation__item" tabindex="0">
+              <b></b>
+              <b></b>
+              <a href="#">
+                <span class="navigation__item--title">Atenuación y Reflexión</span>
+              </a>
               <!---- En el div content irá el contenido de los diferentes items del wireframe, ocultando todos exceptuando el activo ---->
               <div class="navigation__item__content">
                 <span class="navigation__item__content--title">¿Qué genera atenuación en una fusión?</span>
@@ -384,9 +399,12 @@
             </li>
             <!-------------------LI END------------------->
             <!-------------------LI START------------------->
-            <li class="navigation__item">
-              <span>¿Fusión o Conector?</span>
-
+            <li class="navigation__item" tabindex="0">
+              <b></b>
+              <b></b>
+              <a href="#">
+                <span class="navigation__item--title">¿Fusión o Conector?</span>
+              </a>
               <!---- En el div content irá el contenido de los diferentes items del wireframe, ocultando todos exceptuando el activo ---->
               <div class="navigation__item__content">
                 <span class="navigation__item__content--title">Condiciones en las que se utilizan Conectores</span>
@@ -462,7 +480,7 @@
         <div class="card-body">
           <h5 class="card-title">OTDR</h5>
           <p class="card-text">Sirve para medir la atenuación a lo largo de una fibra en largas distancias (Kms)</p>
-          <a href="pages/herramienta.html#info">Leer mas</a>
+          <a href="herramienta.html#info">Leer mas</a>
         </div>
       </div>
 
@@ -471,7 +489,7 @@
         <div class="card-body">
           <h5 class="card-title">Power Meter</h5>
           <p class="card-text">Sirve para medir la atenuación a lo largo de una fibra en cortas distancias</p>
-          <a href="pages/herramienta.html#info">Leer mas</a>
+          <a href="herramienta.html#info">Leer mas</a>
         </div>
       </div>
 
@@ -481,7 +499,7 @@
           <h5 class="card-title">Lapiz Limpiador</h5>
           <p class="card-text">Sirve para limpiar los conectores de fibra y que los mismos no generen tanta atenuación
           </p>
-          <a href="pages/herramienta.html#info">Leer mas</a>
+          <a href="herramienta.html#info">Leer mas</a>
         </div>
       </div>
 
@@ -491,7 +509,7 @@
           <h5 class="card-title">Cleaver</h5>
           <p class="card-text">Sirve para cortar los pelos de fibra con el fin de dejar un lado completamente recto
             (para fusión)</p>
-          <a href="pages/herramienta.html#info">Leer mas</a>
+          <a href="herramienta.html#info">Leer mas</a>
         </div>
       </div>
     </section>
@@ -508,6 +526,20 @@
     </div>
   </footer>
   <!-------------------FOOTER END------------------->
+  <!--Este script hace que se cambie la clase "active" según el span en el cual se hace el click en la infoSection-->
+  <script>
+    let list = document.querySelectorAll('.navigation__item');
+    for (let i = 0; i < list.length; i++) {
+      list[i].onclick = function () {
+        let j = 0;
+        while (j < list.length) {
+          list[j++].className = 'navigation__item';
+        }
+        list[i].className = 'navigation__item navigation__item--active'
+      }
+    }
+  </script>
+
   <script src="bootstrap.min.js"></script>
 </body>
 

@@ -59,6 +59,12 @@
 
         .carousel-item {
           margin-top: 15px;
+
+          .w-100{
+            max-width: 260px;
+            max-height: 290px;
+            margin: 0 auto;
+          }
         }
       }
     }
