@@ -1,5 +1,11 @@
 @import 'variables.scss';
 
+/*
+Esta sección se organiza colocando el contenedor de los diferentes inputs en flex y juntando los primeros tres inputs dentro de un div para que se separen de manera equitativa con el textarea
+El formulario solo se encuentra en el documento "index.html"
+Este archivo da los estilos pensados para celular, ya que se utilizó la metodología Mobile First
+Los media querys se encuentran en el archivo styles.scss
+*/
 .formSection {
   margin-top: 30px;
   background-color: $color-terciario;

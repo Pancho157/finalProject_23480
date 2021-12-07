@@ -1,5 +1,12 @@
 @import "variables.scss";
 
+/*
+Este archivo scss es el que da los estilos a todas las secciones con contenido que se muestra con el elemento "li" activo de los diferentes archivos html que lo poseen
+Para ello se utilizó un pequeño script que cambia las clases de los diferentes elementos li de la sección en cuestión
+Este archivo da los estilos pensados para celular, ya que se utilizó la metodología Mobile First
+Los media querys se encuentran en el archivo styles.scss
+*/
+
 .infoSection {
   width: 84%;
   margin-left: 8%;
@@ -61,6 +68,7 @@
           margin-top: 15px;
 
           .w-100{
+            /* w-100 son las imagenes que se muestran en el carrusel de Bootstrap*/
             max-width: 260px;
             max-height: 290px;
             margin: 0 auto;

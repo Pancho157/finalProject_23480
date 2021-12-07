@@ -1,5 +1,12 @@
 @import 'variables.scss';
 
+/*
+Este archivo scss es el que da los estilos a todos los header de los diferentes archivos html
+Trata de un div (con el logo y la marca) ubicado a la izquierda del header y el menú para navegar por las diferentes páginas a la derecha.
+Este archivo da los estilos pensados para celular, ya que se utilizó la metodología Mobile First
+Los media querys se encuentran en el archivo styles.scss
+*/
+
 header {
     display: flex;
     flex-direction: column;

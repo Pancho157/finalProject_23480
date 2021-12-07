@@ -1,5 +1,11 @@
 @import "variables.scss";
 
+/*
+Este archivo scss es el que da los estilos a la sección que muestra la información sobre las herramientas en el documento herramientas.html
+Este archivo da los estilos pensados para celular, ya que se utilizó la metodología Mobile First
+Los media querys se encuentran en el archivo styles.scss
+*/
+
 .toolsInfo {
   width: 90%;
   height: auto;

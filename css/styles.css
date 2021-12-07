@@ -1,5 +1,11 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+/* 
+Este archivo posee todas las variables utilizadas en los diferentes archivos scss
+*/
+/*
+El objetivo de este archivo scss es el de dar los estilos generales a los diferentes archivos html
+*/
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
@@ -24,6 +30,15 @@ a {
   padding: 0;
   margin: 0; }
 
+/* 
+Este archivo posee todas las variables utilizadas en los diferentes archivos scss
+*/
+/*
+Este archivo scss es el que da los estilos a todos los header de los diferentes archivos html
+Trata de un div (con el logo y la marca) ubicado a la izquierda del header y el menú para navegar por las diferentes páginas a la derecha.
+Este archivo da los estilos pensados para celular, ya que se utilizó la metodología Mobile First
+Los media querys se encuentran en el archivo styles.scss
+*/
 header {
   display: flex;
   flex-direction: column;
@@ -100,6 +115,15 @@ header {
     opacity: 1;
     translate: translateX(0); } }
 
+/* 
+Este archivo posee todas las variables utilizadas en los diferentes archivos scss
+*/
+/*
+Este archivo scss es el que da los estilos a todas las secciones con contenido que se muestra con el elemento "li" activo de los diferentes archivos html que lo poseen
+Para ello se utilizó un pequeño script que cambia las clases de los diferentes elementos li de la sección en cuestión
+Este archivo da los estilos pensados para celular, ya que se utilizó la metodología Mobile First
+Los media querys se encuentran en el archivo styles.scss
+*/
 .infoSection {
   width: 84%;
   margin-left: 8%;
@@ -145,6 +169,7 @@ header {
     .navigation ul .navigation__item .navigation__item__content .carousel-item {
       margin-top: 15px; }
       .navigation ul .navigation__item .navigation__item__content .carousel-item .w-100 {
+        /* w-100 son las imagenes que se muestran en el carrusel de Bootstrap*/
         max-width: 260px;
         max-height: 290px;
         margin: 0 auto; }
@@ -152,6 +177,15 @@ header {
     border-top-left-radius: 15px;
     border-top-right-radius: 15px; }
 
+/* 
+Este archivo posee todas las variables utilizadas en los diferentes archivos scss
+*/
+/*
+Este archivo scss es el que da los estilos a todas las secciones que tienen las cards que direccionan al archivo herramientas.html
+También da estilo a las cards
+Este archivo da los estilos pensados para celular, ya que se utilizó la metodología Mobile First
+Los media querys se encuentran en el archivo styles.scss
+*/
 .toolSection {
   margin-top: 30px;
   background-color: #fff;
@@ -191,6 +225,15 @@ header {
       border: 1px solid #3a3a3a;
       border-radius: 15px; }
 
+/* 
+Este archivo posee todas las variables utilizadas en los diferentes archivos scss
+*/
+/*
+Esta sección se organiza colocando el contenedor de los diferentes inputs en flex y juntando los primeros tres inputs dentro de un div para que se separen de manera equitativa con el textarea
+El formulario solo se encuentra en el documento "index.html"
+Este archivo da los estilos pensados para celular, ya que se utilizó la metodología Mobile First
+Los media querys se encuentran en el archivo styles.scss
+*/
 .formSection {
   margin-top: 30px;
   background-color: #fff;
@@ -293,6 +336,9 @@ header {
     transform: translateY(0px); }
   100% { } }
 
+/* 
+Este archivo posee todas las variables utilizadas en los diferentes archivos scss
+*/
 .footerSection {
   margin-top: 30px;
   background-color: #fbbf65;
@@ -321,6 +367,14 @@ header {
       width: 40px;
       height: 40px; }
 
+/* 
+Este archivo posee todas las variables utilizadas en los diferentes archivos scss
+*/
+/*
+Este archivo scss es el que da los estilos a la sección que muestra la información sobre las herramientas en el documento herramientas.html
+Este archivo da los estilos pensados para celular, ya que se utilizó la metodología Mobile First
+Los media querys se encuentran en el archivo styles.scss
+*/
 .toolsInfo {
   width: 90%;
   height: auto;
@@ -369,7 +423,14 @@ header {
     .toolsInfo #carouselExampleIndicators .carousel-inner .carousel-item {
       margin: 0 auto; }
 
+/*
+Este es el archivo que junta todos los documentos scss en uno y es el archivo que se utiliza para generar el archivo styles.css
+También este es el archivo en el que se implementan los media querys para las correcciones de los diferentes archivos en sus diferentes resoluciones.
+*/
 /* ----------------------------------------------------Vista Tablet-------------------------- */
+/*
+En esta vista se cambió la distribución del formulario en el index.html para que se encuentre separado en dos partes, en vez de estar todo alineado hacia abajo
+*/
 @media screen and (min-device-width: 712px) {
   .toolSection {
     padding-top: 60px;
@@ -459,6 +520,11 @@ header {
     line-height: 30px; } }
 
 /* ----------------------------------------------------Vista Tablet Acostada-------------------------- */
+/*
+En este media query se cambia la manera en la ubicación de los sliders, pasando de estar debajo del contenido a su costado
+También se cambia la sección de herramientas, haciendo que la misma tenga una altura fija, en vez de tener un "overflow: auto"
+Y por último se cambió la distribución del menú del header, pasando de estar debajo de la marca a estár al lado de la misma y con el mismo color
+*/
 @media screen and (min-device-width: 1188px) {
   header {
     flex-direction: row;
@@ -524,8 +590,9 @@ header {
     width: 64%; }
     .toolsInfo .toolsInfo__content p {
       width: 75%; }
-  #tools {
-    border-top-left-radius: 50px; }
+  /*Esta categoría redondea el borde superior izquierdo de la sección de herramientas en el archivo herramientas.html*/
+  .borderTopLeftRadius {
+    border-top-left-radius: 50px !important; }
   #carouselExampleIndicators {
     position: absolute;
     top: 200px;
@@ -534,6 +601,9 @@ header {
     height: 520px !important; } }
 
 /* ----------------------------------------------------Vista Computadora-------------------------- */
+/*
+Con este media query se cambió la manera en la que se distribuye el contenido del aside, dejando de ser vertical y pasando a tener el contenido oculto, a excepción del elemento que se encuentra activo.
+*/
 @media screen and (min-device-width: 1440px) {
   .infoSection {
     margin-top: 0;
@@ -627,7 +697,7 @@ header {
             border-radius: 7%;
             overflow: hidden;
             position: absolute;
-            margin: -650px 0 0 55% !important; }
+            margin: -150px 0 0 55% !important; }
       .infoSection aside .navigation ul .navigation__item--active {
         background-color: #3a3a3a;
         display: flex;
@@ -655,7 +725,7 @@ header {
           z-index: 2; }
           .infoSection aside .navigation ul .navigation__item--active > .navigation__item__content .navigation__item__content--title:first-of-type {
             margin-top: 60px; }
-  /* Esta sección del código se encarga de alinear en altura los contenidos de los aside */
+  /* Esta sección del código se encarga de alinear en altura los contenidos de los diferentes elementos li, ya que empiezan desde diferentes alturas */
   .navigation ul li:nth-of-type(1) .navigation__item__content {
     margin-top: -117px; }
   .navigation ul li:nth-of-type(2) .navigation__item__content {

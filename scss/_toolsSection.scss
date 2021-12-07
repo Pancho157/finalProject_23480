@@ -1,5 +1,12 @@
 @import "variables.scss";
 
+/*
+Este archivo scss es el que da los estilos a todas las secciones que tienen las cards que direccionan al archivo herramientas.html
+También da estilo a las cards
+Este archivo da los estilos pensados para celular, ya que se utilizó la metodología Mobile First
+Los media querys se encuentran en el archivo styles.scss
+*/
+
 .toolSection {
   margin-top: 30px;
   background-color: $color-terciario;

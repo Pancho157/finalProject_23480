@@ -6,7 +6,17 @@
 @import "footerSection.scss";
 @import "toolPageInfoSection.scss";
 
+
+/*
+Este es el archivo que junta todos los documentos scss en uno y es el archivo que se utiliza para generar el archivo styles.css
+También este es el archivo en el que se implementan los media querys para las correcciones de los diferentes archivos en sus diferentes resoluciones.
+*/
+
 /* ----------------------------------------------------Vista Tablet-------------------------- */
+
+/*
+En esta vista se cambió la distribución del formulario en el index.html para que se encuentre separado en dos partes, en vez de estar todo alineado hacia abajo
+*/
 
 @media screen and (min-device-width: 712px) {
   .toolSection {
@@ -139,7 +149,11 @@
 }
 
 /* ----------------------------------------------------Vista Tablet Acostada-------------------------- */
-
+/*
+En este media query se cambia la manera en la ubicación de los sliders, pasando de estar debajo del contenido a su costado
+También se cambia la sección de herramientas, haciendo que la misma tenga una altura fija, en vez de tener un "overflow: auto"
+Y por último se cambió la distribución del menú del header, pasando de estar debajo de la marca a estár al lado de la misma y con el mismo color
+*/
 @media screen and (min-device-width: 1188px) {
   header {
     flex-direction: row;
@@ -248,8 +262,9 @@
     }
   }
 
-  #tools{
-    border-top-left-radius: 50px;
+  /*Esta categoría redondea el borde superior izquierdo de la sección de herramientas en el archivo herramientas.html*/
+  .borderTopLeftRadius{
+    border-top-left-radius: 50px !important;
   }
 
   #carouselExampleIndicators{
@@ -262,7 +277,9 @@
 }
 
 /* ----------------------------------------------------Vista Computadora-------------------------- */
-
+/*
+Con este media query se cambió la manera en la que se distribuye el contenido del aside, dejando de ser vertical y pasando a tener el contenido oculto, a excepción del elemento que se encuentra activo.
+*/
 @media screen and (min-device-width: 1440px) {
   .infoSection {
     margin-top: 0;
@@ -381,7 +398,7 @@
                 border-radius: 7%;
                 overflow: hidden;
                 position: absolute;
-                margin: -650px 0 0 55% !important;
+                margin: -150px 0 0 55% !important;
               }
             }
           }
@@ -429,7 +446,7 @@
     }
   }
 
-  /* Esta sección del código se encarga de alinear en altura los contenidos de los aside */
+  /* Esta sección del código se encarga de alinear en altura los contenidos de los diferentes elementos li, ya que empiezan desde diferentes alturas */
   .navigation ul li:nth-of-type(1) .navigation__item__content {
     margin-top: -117px;
   }
