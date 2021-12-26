@@ -20,6 +20,7 @@ Los media querys se encuentran en el archivo styles.scss
   overflow: auto;
   column-gap: 20px;
   row-gap: 20px;
+  padding-bottom: 20px;
 
   h2 {
     background-color: $color-primario;
@@ -40,7 +41,8 @@ Los media querys se encuentran en el archivo styles.scss
     margin-top: 70px;
     border: 1px solid $color-secundario;
     background-color: $color-primario;
-    height: 450px;
+    height: 410px;
+    width: 260px !important;
     border-radius: 25px;
 
     .card-img-top {

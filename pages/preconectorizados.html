@@ -515,13 +515,14 @@
 
     <div class="footerSection__technologies">
       <p>Tecnologías utilizadas:</p>
-      <img src="assets/Images/htmlLogo.png" alt="HTML" />
-      <img src="assets/Images/cssLogo.svg" alt="CSS" />
+      <img src="../assets/Images/htmlLogo.png" alt="HTML" />
+      <img src="../assets/Images/cssLogo.svg" alt="CSS" />
     </div>
   </footer>
   <!-------------------FOOTER END------------------->
 
-  <!--Este script hace que se cambie la clase "active" según el span en el cual se hace el click en la infoSection-->
+  <!--Este script hace que se cambie la clase "active" según el span en el cual se hace el click en la infoSection
+  Para ello activa una función cuando se hace click sobre alguno de los span.navigation__item, la cual deja sin ningún eleemento activo al navigation y luego coloca la clase activo al elemento en el cual hice click-->
   <script>
     let list = document.querySelectorAll('.navigation__item');
     for (let i = 0; i < list.length; i++) {
@@ -535,7 +536,7 @@
     }
   </script>
 
-  <script src="bootstrap.min.js"></script>
+  <script src="../bootstrap.min.js"></script>
 </body>
 
 </html>

@@ -31,26 +31,41 @@ Los media querys se encuentran en el archivo styles.scss
 
   ul {
     .navigation__item {
-      span {
-        background-color: $color-primario;
-        display: block;
-        line-height: 25px;
-        border-top: 2px solid #000000;
-        border-bottom: 2px solid #000000;
+      a{
+        color: $color-secundario;
         font-size: 18px;
-        text-align: center;
-        cursor: pointer;
+
+        span {
+          background-color: $color-primario;
+          display: block;
+          line-height: 25px;
+          border-top: 2px solid #000000;
+          border-bottom: 2px solid #000000;
+          font-size: 18px;
+          text-align: center;
+          cursor: pointer;
+        }
       }
 
       .navigation__item__content {
         width: calc(100%-200px);
         margin-left: 5%;
+        display: none;
+
 
         .navigation__item__content--title {
+          display: block;
           line-height: 40px;
           font-size: 18px;
           background-color: $color-terciario;
           border: none;
+          text-align: center;
+          width: 100%;
+        }
+
+        p{
+          width: 90%;
+          margin: 0 auto 20px;
         }
 
         #carouselExampleIndicators {
@@ -67,7 +82,7 @@ Los media querys se encuentran en el archivo styles.scss
         .carousel-item {
           margin-top: 15px;
 
-          .w-100{
+          .w-100 {
             /* w-100 son las imagenes que se muestran en el carrusel de Bootstrap*/
             max-width: 260px;
             max-height: 290px;
@@ -77,10 +92,23 @@ Los media querys se encuentran en el archivo styles.scss
       }
     }
 
+    .navigation__item--active {
+      .navigation__item__content {
+        display: initial;
+      }
+    }
+
     .navigation__item:first-of-type {
       span {
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
+      }
+    }
+
+    .navigation__item:last-of-type {
+      span {
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
       }
     }
   }

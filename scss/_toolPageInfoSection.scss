@@ -7,16 +7,15 @@ Los media querys se encuentran en el archivo styles.scss
 */
 
 .toolsInfo {
-  width: 90%;
+  width: 100%;
   height: auto;
-  margin-left: 5%;
-  padding-right: 5%;
   padding-bottom: 40px;
   background-color: $color-secundario;
   border-bottom-left-radius: 50px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  padding: 20px;
 
   h1 {
     font-size: 36px;
@@ -24,47 +23,47 @@ Los media querys se encuentran en el archivo styles.scss
     width: 100%;
     color: $color-terciario;
     display: block;
-    margin-top: 40px;    
+    margin-top: 20px;
   }
 
   .toolsInfo__content {
-    width: 100%;
-    padding-left: 60px;
-    
+    width: 94%;
+    padding-left: 6%;
 
     h2 {
-      font-size: 25px;
+      font-size: 20px;
       margin-top: 35px;
       margin-bottom: 0px;
       color: $color-secundario;
       background-color: $color-terciario;
       display: block;
-      width: 50%;
+      width: 85%;
       border-top-left-radius: 15px;
       border-top-right-radius: 15px;
     }
 
     p {
       color: $color-terciario;
-      width: 100%;
+      width: 95%;
+      padding: 15px;
       display: inline-block;
       border: 1px solid $color-terciario;
       box-shadow: 1px 1px 1px $color-terciario, 2px 2px 1px $color-terciario,
         3px 3px 1px $color-terciario;
-        margin-top: 0;
+      margin: 0 auto;
     }
   }
 
   #carouselExampleIndicators {
-    width: 300px;
+    width: 35%;
     height: 420px;
     background-color: $color-terciario;
     border-radius: 7%;
     overflow: hidden;
     margin: 30px auto 0;
 
-    .carousel-inner{
-      .carousel-item{
+    .carousel-inner {
+      .carousel-item {
         margin: 0 auto;
       }
     }

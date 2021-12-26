@@ -6,11 +6,18 @@
 @import "footerSection.scss";
 @import "toolPageInfoSection.scss";
 
-
 /*
 Este es el archivo que junta todos los documentos scss en uno y es el archivo que se utiliza para generar el archivo styles.css
 También este es el archivo en el que se implementan los media querys para las correcciones de los diferentes archivos en sus diferentes resoluciones.
 */
+
+@media screen and (min-device-width: 565px) {
+  .footerSection {
+    > p {
+      border: none;
+    }
+  }
+}
 
 /* ----------------------------------------------------Vista Tablet-------------------------- */
 
@@ -146,6 +153,31 @@ En esta vista se cambió la distribución del formulario en el index.html para q
     border: none;
     line-height: 30px;
   }
+
+  /* El código ubicade debajo brinda una nueva distribución a la sección de información en el elemento herramienta.html */
+
+  .toolsInfo {
+    .toolsInfo__content {
+      h2 {
+        width: 270px;
+      }
+
+      p {
+        width: 46%;
+      }
+
+      > p:last-of-type,
+      p:nth-of-type(3) {
+        width: 98%;
+      }
+    }
+
+    .carousel {
+      position: absolute;
+      top: 210px;
+      left: 55%;
+    }
+  }
 }
 
 /* ----------------------------------------------------Vista Tablet Acostada-------------------------- */
@@ -154,6 +186,7 @@ En este media query se cambia la manera en la ubicación de los sliders, pasando
 También se cambia la sección de herramientas, haciendo que la misma tenga una altura fija, en vez de tener un "overflow: auto"
 Y por último se cambió la distribución del menú del header, pasando de estar debajo de la marca a estár al lado de la misma y con el mismo color
 */
+
 @media screen and (min-device-width: 1188px) {
   header {
     flex-direction: row;
@@ -196,22 +229,42 @@ Y por último se cambió la distribución del menú del header, pasando de estar
       .navigation__item__content {
         .navigation__item__content--title,
         p {
-          width: 453px;
+          width: 55% !important;
+          margin-left: 5% !important;
         }
 
         .navigation__item__content--title {
           font-size: 20px;
           line-height: 50px;
         }
+      }
 
-        #carouselExampleIndicators {
-          width: 300px;
-          height: 350px;
-          background-color: $color-terciario;
-          border-radius: 7%;
-          overflow: hidden;
-          position: absolute;
-          margin: -360px 0 0 49% !important;
+      #carouselExampleIndicators {
+        position: absolute;
+        left: 62%;
+        width: 320px !important;
+        height: 400px !important;
+        background-color: $color-terciario;
+      }
+    }
+
+    .navigation__item:nth-of-type(2) {
+      .navigation__item__content {
+        > #carouselExampleIndicators {
+          top: 225px !important;
+        }
+      }
+    }
+
+    // El bucle for ubicado debajo coloca los sliders de la sección de información en los diferentes archivos HTML
+    // Para ello selecciona los diferentes .navigation__item y modifica la protiedad "top" de cada uno de los sliders
+    @for $i from 1 through 7 {
+      .navigation__item:nth-of-type(#{$i}) {
+        .navigation__item__content {
+          .carousel {
+            top: 200px !important;
+            margin-top: #{$i * 30 - 25}px !important;
+          }
         }
       }
     }
@@ -230,7 +283,7 @@ Y por último se cambió la distribución del menú del header, pasando de estar
 
     .card {
       width: 220px;
-      height: 450px;
+      height: 410px;
     }
   }
 
@@ -242,37 +295,62 @@ Y por último se cambió la distribución del menú del header, pasando de estar
       column-gap: 90px;
     }
   }
-}
 
+  /* En el código de debajo se corrige el slider de la sección de información del archivo herramienta.html */
+
+  .toolsInfo {
+    .toolsInfo__content {
+      h2 {
+        width: 40%;
+      }
+    }
+
+    .correccionHerramientaHTML {
+      height: 420px !important;
+      top: 165px;
+    }
+  }
+}
 
 /* ----------Corrección para la sección de información en la sección de información en la página de herramientas----------- */
 @media screen and (min-device-width: 1250px) {
-  .toolsInfo{
-    h1{
-      width: 30%;
-      padding-left: 200px;
-    }
-
-    .toolsInfo__content{
+  .toolsInfo {
+    .toolsInfo__content {
       width: 64%;
+      padding-bottom: 30px;
+      padding-left: 6%;
 
-      p{
-        width: 75%;
+      p {
+        width: 94%;
+      }
+
+      p:last-of-type,
+      p:nth-of-type(3) {
+        width: 94%;
       }
     }
+
+    .correccionHerramientaHTML {
+      right: 5% !important;
+      left: 60%;
+      width: 28% !important;
+      height: 64vh !important;
+    }
   }
 
-  /*Esta categoría redondea el borde superior izquierdo de la sección de herramientas en el archivo herramientas.html*/
-  .borderTopLeftRadius{
+  .borderTopLeftRadius {
     border-top-left-radius: 50px !important;
+    /*Esta categoría redondea el borde superior izquierdo de la sección de herramientas en el archivo herramientas.html*/
   }
+}
 
-  #carouselExampleIndicators{
-    position: absolute;
-    top: 200px;
-    right: 15%;
-    width: 400px !important;
-    height: 520px !important;
+/* El media query ubicado debajo se utiliza para corregír la disposición de las cards de la sección de herramientas en los diferentes archivos HTML*/
+
+@media screen and (min-device-width: 1828px) {
+  .toolSection {
+    .card {
+      margin: 0 34px;
+    }
   }
 }
 
@@ -288,7 +366,6 @@ Con este media query se cambió la manera en la que se distribuye el contenido d
     margin-left: 7%;
     padding-right: 5%;
     background-color: $color-terciario;
-    overflow: auto;
 
     aside {
       h2 {
@@ -296,6 +373,9 @@ Con este media query se cambió la manera en la que se distribuye el contenido d
         font-size: 28px;
         text-align: left;
         color: $color-secundario;
+        width: 335px;
+        padding-top: 42px;
+        text-align: center;
       }
 
       .navigation {
@@ -310,12 +390,13 @@ Con este media query se cambió la manera en la que se distribuye el contenido d
             width: 100%;
             border-top-left-radius: 20px;
             border-bottom-left-radius: 20px;
+            margin-left: 12px;
 
             b:nth-child(1) {
               position: absolute;
               top: -20px;
               height: 20px;
-              width: 100%;
+              width: 335px;
               background: #3a3a3a;
               display: none;
             }
@@ -325,7 +406,7 @@ Con este media query se cambió la manera en la que se distribuye el contenido d
               position: absolute;
               top: 0;
               left: 0;
-              width: 20%;
+              width: 335px;
               height: 100%;
               border-bottom-right-radius: 20px;
               background: $color-terciario;
@@ -335,7 +416,7 @@ Con este media query se cambió la manera en la que se distribuye el contenido d
               position: absolute;
               bottom: -20px;
               height: 20px;
-              width: 100%;
+              width: 335px;
               background: $color-secundario;
               display: none;
               z-index: 1;
@@ -346,7 +427,7 @@ Con este media query se cambió la manera en la que se distribuye el contenido d
               position: absolute;
               top: 0;
               left: 0;
-              width: 20%;
+              width: 335px;
               height: 100%;
               border-top-right-radius: 20px;
               background: $color-terciario;
@@ -355,10 +436,17 @@ Con este media query se cambió la manera en la que se distribuye el contenido d
             span {
               background-color: $color-terciario;
               color: $color-secundario;
-              margin-left: 5px;
               border: none;
               text-align: left;
               line-height: 60px;
+              width: 335px;
+              text-align: center;
+            }
+
+            .carousel-control-prev-icon,
+            .carousel-control-next-icon {
+              background-color: $color-secundario;
+              border-radius: 50%;
             }
 
             .navigation__item__content {
@@ -367,14 +455,15 @@ Con este media query se cambió la manera en la que se distribuye el contenido d
 
               .navigation__item__content--title {
                 margin-left: 80px;
-                margin-top: 25px;
+                margin-top: 45px;
                 border-top-left-radius: 15px;
                 border-top-right-radius: 15px;
+                width: 40% !important;
               }
 
               p {
                 line-height: 20px;
-                width: 470px;
+                width: 510px;
                 height: 180px;
                 margin-left: 80px;
                 color: $color-terciario;
@@ -387,18 +476,28 @@ Con este media query se cambió la manera en la que se distribuye el contenido d
               }
 
               p:last-of-type {
-                height:106px;
+                height: 106px;
                 padding: 15px;
               }
 
               #carouselExampleIndicators {
-                width: 400px;
+                width: 30% !important;
                 height: 520px;
                 background-color: $color-terciario;
                 border-radius: 7%;
                 overflow: hidden;
                 position: absolute;
-                margin: -150px 0 0 55% !important;
+                left: 63%;
+                top: 150px;
+              }
+            }
+          }
+
+          .navigation__item:last-of-type {
+            .navigation__item__content {
+              span {
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
               }
             }
           }
@@ -416,28 +515,30 @@ Con este media query se cambió la manera en la que se distribuye el contenido d
             }
 
             > a {
+              border-top-left-radius: 50px;
+              border-bottom-left-radius: 50px;
+
               span {
                 color: $color-terciario;
                 background-color: $color-secundario;
                 border-top-left-radius: 25px;
                 border-bottom-left-radius: 25px;
-                padding-left: 15px;
-                margin-left: 20px;
+                margin: 0;
               }
             }
 
             > .navigation__item__content {
               display: initial;
               position: absolute;
-              width: 73%;
-              margin-left: 20%;
-              width: 85.7%;
+              right: -5%;
+              margin-left: 335px;
+              width: auto;
               height: 83vh;
               border-bottom-left-radius: 80px;
               z-index: 2;
 
-              .navigation__item__content--title:first-of-type{
-                margin-top: 60px;
+              .navigation__item__content--title:first-of-type {
+                margin-top: 50px;
               }
             }
           }
@@ -447,36 +548,61 @@ Con este media query se cambió la manera en la que se distribuye el contenido d
   }
 
   /* Esta sección del código se encarga de alinear en altura los contenidos de los diferentes elementos li, ya que empiezan desde diferentes alturas */
+
   .navigation ul li:nth-of-type(1) .navigation__item__content {
-    margin-top: -117px;
+    top: -160px;
+
+    > #carouselExampleIndicators {
+      margin-top: 0px !important;
+    }
   }
 
   .navigation ul li:nth-of-type(2) .navigation__item__content {
-    margin-top: -177px;
+    top: -220px;
+
+    > #carouselExampleIndicators {
+      margin-top: -26px !important;
+    }
   }
 
   .navigation ul li:nth-of-type(3) .navigation__item__content {
-    margin-top: -237px;
+    top: -280px;
+
+    > #carouselExampleIndicators {
+      margin-top: 0px !important;
+    }
   }
 
   .navigation ul li:nth-of-type(4) .navigation__item__content {
-    margin-top: -297px;
+    top: -340px;
+
+    > #carouselExampleIndicators {
+      margin-top: 0px !important;
+    }
   }
 
   .navigation ul li:nth-of-type(5) .navigation__item__content {
-    margin-top: -357px;
+    top: -400px;
+
+    > #carouselExampleIndicators {
+      margin-top: 0px !important;
+    }
   }
 
   .navigation ul li:nth-of-type(6) .navigation__item__content {
-    margin-top: -417px;
+    top: -460px;
+
+    > #carouselExampleIndicators {
+      margin-top: 0px !important;
+    }
   }
 
   .navigation ul li:nth-of-type(7) .navigation__item__content {
-    margin-top: -477px;
-  }
+    top: -520px;
 
-  .navigation ul li:nth-of-type(8) .navigation__item__content {
-    margin-top: -537px;
+    > #carouselExampleIndicators {
+      margin-top: 0px !important;
+    }
   }
 
   .toolSection {
@@ -484,7 +610,7 @@ Con este media query se cambió la manera en la que se distribuye el contenido d
     margin-top: 0;
     height: auto;
     padding: 150px 160px 30px 160px;
-    width: 93.05%;
+    width: 93.09%;
     margin-left: 6.95%;
     display: flex;
     flex-direction: row;

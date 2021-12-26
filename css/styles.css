@@ -20,7 +20,9 @@ body {
   background-color: #3a3a3a;
   margin: 0;
   padding: 0;
-  width: 100%; }
+  width: 100%;
+  overflow: hidden;
+  overflow-y: auto; }
 
 ol,
 ul,
@@ -29,6 +31,14 @@ a {
   list-style: none;
   padding: 0;
   margin: 0; }
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #3a3a3a;
+  border-radius: 50%; }
+
+.carousel-indicators > [data-bs-target] {
+  background-color: #3a3a3a; }
 
 /* 
 Este archivo posee todas las variables utilizadas en los diferentes archivos scss
@@ -140,23 +150,33 @@ Los media querys se encuentran en el archivo styles.scss
   border-left: 2px solid #000000;
   border-right: 2px solid #000000;
   border-bottom: 2px solid #000000; }
-  .navigation ul .navigation__item span {
-    background-color: #fbbf65;
-    display: block;
-    line-height: 25px;
-    border-top: 2px solid #000000;
-    border-bottom: 2px solid #000000;
-    font-size: 18px;
-    text-align: center;
-    cursor: pointer; }
+  .navigation ul .navigation__item a {
+    color: #3a3a3a;
+    font-size: 18px; }
+    .navigation ul .navigation__item a span {
+      background-color: #fbbf65;
+      display: block;
+      line-height: 25px;
+      border-top: 2px solid #000000;
+      border-bottom: 2px solid #000000;
+      font-size: 18px;
+      text-align: center;
+      cursor: pointer; }
   .navigation ul .navigation__item .navigation__item__content {
     width: calc(100%-200px);
-    margin-left: 5%; }
+    margin-left: 5%;
+    display: none; }
     .navigation ul .navigation__item .navigation__item__content .navigation__item__content--title {
+      display: block;
       line-height: 40px;
       font-size: 18px;
       background-color: #fff;
-      border: none; }
+      border: none;
+      text-align: center;
+      width: 100%; }
+    .navigation ul .navigation__item .navigation__item__content p {
+      width: 90%;
+      margin: 0 auto 20px; }
     .navigation ul .navigation__item .navigation__item__content #carouselExampleIndicators {
       width: 260px;
       height: 300px;
@@ -173,9 +193,14 @@ Los media querys se encuentran en el archivo styles.scss
         max-width: 260px;
         max-height: 290px;
         margin: 0 auto; }
+  .navigation ul .navigation__item--active .navigation__item__content {
+    display: initial; }
   .navigation ul .navigation__item:first-of-type span {
     border-top-left-radius: 15px;
     border-top-right-radius: 15px; }
+  .navigation ul .navigation__item:last-of-type span {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px; }
 
 /* 
 Este archivo posee todas las variables utilizadas en los diferentes archivos scss
@@ -198,7 +223,8 @@ Los media querys se encuentran en el archivo styles.scss
   border-bottom: 1px solid #000000;
   overflow: auto;
   column-gap: 20px;
-  row-gap: 20px; }
+  row-gap: 20px;
+  padding-bottom: 20px; }
   .toolSection h2 {
     background-color: #fbbf65;
     display: block;
@@ -216,7 +242,8 @@ Los media querys se encuentran en el archivo styles.scss
     margin-top: 70px;
     border: 1px solid #3a3a3a;
     background-color: #fbbf65;
-    height: 450px;
+    height: 410px;
+    width: 260px !important;
     border-radius: 25px; }
     .toolSection .card .card-img-top {
       width: 200px;
@@ -361,7 +388,7 @@ Este archivo posee todas las variables utilizadas en los diferentes archivos scs
     justify-content: center;
     align-items: center; }
     .footerSection .footerSection__technologies p {
-      display: inline-block; }
+      display: block; }
     .footerSection .footerSection__technologies img {
       display: inline-block;
       width: 40px;
@@ -376,45 +403,45 @@ Este archivo da los estilos pensados para celular, ya que se utilizó la metodol
 Los media querys se encuentran en el archivo styles.scss
 */
 .toolsInfo {
-  width: 90%;
+  width: 100%;
   height: auto;
-  margin-left: 5%;
-  padding-right: 5%;
   padding-bottom: 40px;
   background-color: #3a3a3a;
   border-bottom-left-radius: 50px;
   overflow: hidden;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  padding: 20px; }
   .toolsInfo h1 {
     font-size: 36px;
     text-align: center;
     width: 100%;
     color: #fff;
     display: block;
-    margin-top: 40px; }
+    margin-top: 20px; }
   .toolsInfo .toolsInfo__content {
-    width: 100%;
-    padding-left: 60px; }
+    width: 94%;
+    padding-left: 6%; }
     .toolsInfo .toolsInfo__content h2 {
-      font-size: 25px;
+      font-size: 20px;
       margin-top: 35px;
       margin-bottom: 0px;
       color: #3a3a3a;
       background-color: #fff;
       display: block;
-      width: 50%;
+      width: 85%;
       border-top-left-radius: 15px;
       border-top-right-radius: 15px; }
     .toolsInfo .toolsInfo__content p {
       color: #fff;
-      width: 100%;
+      width: 95%;
+      padding: 15px;
       display: inline-block;
       border: 1px solid #fff;
       box-shadow: 1px 1px 1px #fff, 2px 2px 1px #fff, 3px 3px 1px #fff;
-      margin-top: 0; }
+      margin: 0 auto; }
   .toolsInfo #carouselExampleIndicators {
-    width: 300px;
+    width: 35%;
     height: 420px;
     background-color: #fff;
     border-radius: 7%;
@@ -427,6 +454,10 @@ Los media querys se encuentran en el archivo styles.scss
 Este es el archivo que junta todos los documentos scss en uno y es el archivo que se utiliza para generar el archivo styles.css
 También este es el archivo en el que se implementan los media querys para las correcciones de los diferentes archivos en sus diferentes resoluciones.
 */
+@media screen and (min-device-width: 565px) {
+  .footerSection > p {
+    border: none; } }
+
 /* ----------------------------------------------------Vista Tablet-------------------------- */
 /*
 En esta vista se cambió la distribución del formulario en el index.html para que se encuentre separado en dos partes, en vez de estar todo alineado hacia abajo
@@ -517,7 +548,19 @@ En esta vista se cambió la distribución del formulario en el index.html para q
     font-weight: 100; }
   .footerSection > p {
     border: none;
-    line-height: 30px; } }
+    line-height: 30px; }
+  /* El código ubicade debajo brinda una nueva distribución a la sección de información en el elemento herramienta.html */
+  .toolsInfo .toolsInfo__content h2 {
+    width: 270px; }
+  .toolsInfo .toolsInfo__content p {
+    width: 46%; }
+  .toolsInfo .toolsInfo__content > p:last-of-type,
+  .toolsInfo .toolsInfo__content p:nth-of-type(3) {
+    width: 98%; }
+  .toolsInfo .carousel {
+    position: absolute;
+    top: 210px;
+    left: 55%; } }
 
 /* ----------------------------------------------------Vista Tablet Acostada-------------------------- */
 /*
@@ -552,18 +595,40 @@ Y por último se cambió la distribución del menú del header, pasando de estar
           font-size: 20px; }
   .navigation .navigation__item .navigation__item__content .navigation__item__content--title,
   .navigation .navigation__item .navigation__item__content p {
-    width: 453px; }
+    width: 55% !important;
+    margin-left: 5% !important; }
   .navigation .navigation__item .navigation__item__content .navigation__item__content--title {
     font-size: 20px;
     line-height: 50px; }
-  .navigation .navigation__item .navigation__item__content #carouselExampleIndicators {
-    width: 300px;
-    height: 350px;
-    background-color: #fff;
-    border-radius: 7%;
-    overflow: hidden;
+  .navigation .navigation__item #carouselExampleIndicators {
     position: absolute;
-    margin: -360px 0 0 49% !important; }
+    left: 62%;
+    width: 320px !important;
+    height: 400px !important;
+    background-color: #fff; }
+  .navigation .navigation__item:nth-of-type(2) .navigation__item__content > #carouselExampleIndicators {
+    top: 225px !important; }
+  .navigation .navigation__item:nth-of-type(1) .navigation__item__content .carousel {
+    top: 200px !important;
+    margin-top: 5px !important; }
+  .navigation .navigation__item:nth-of-type(2) .navigation__item__content .carousel {
+    top: 200px !important;
+    margin-top: 35px !important; }
+  .navigation .navigation__item:nth-of-type(3) .navigation__item__content .carousel {
+    top: 200px !important;
+    margin-top: 65px !important; }
+  .navigation .navigation__item:nth-of-type(4) .navigation__item__content .carousel {
+    top: 200px !important;
+    margin-top: 95px !important; }
+  .navigation .navigation__item:nth-of-type(5) .navigation__item__content .carousel {
+    top: 200px !important;
+    margin-top: 125px !important; }
+  .navigation .navigation__item:nth-of-type(6) .navigation__item__content .carousel {
+    top: 200px !important;
+    margin-top: 155px !important; }
+  .navigation .navigation__item:nth-of-type(7) .navigation__item__content .carousel {
+    top: 200px !important;
+    margin-top: 185px !important; }
   .toolSection {
     padding-top: 60px;
     height: auto;
@@ -574,31 +639,43 @@ Y por último se cambió la distribución del menú del header, pasando de estar
       line-height: 40px; }
     .toolSection .card {
       width: 220px;
-      height: 450px; }
+      height: 410px; }
   .formSection {
     width: 92%;
     margin-left: 8%; }
     .formSection form {
-      column-gap: 90px; } }
+      column-gap: 90px; }
+  /* En el código de debajo se corrige el slider de la sección de información del archivo herramienta.html */
+  .toolsInfo .toolsInfo__content h2 {
+    width: 40%; }
+  .toolsInfo .correccionHerramientaHTML {
+    height: 420px !important;
+    top: 165px; } }
 
 /* ----------Corrección para la sección de información en la sección de información en la página de herramientas----------- */
 @media screen and (min-device-width: 1250px) {
-  .toolsInfo h1 {
-    width: 30%;
-    padding-left: 200px; }
   .toolsInfo .toolsInfo__content {
-    width: 64%; }
+    width: 64%;
+    padding-bottom: 30px;
+    padding-left: 6%; }
     .toolsInfo .toolsInfo__content p {
-      width: 75%; }
-  /*Esta categoría redondea el borde superior izquierdo de la sección de herramientas en el archivo herramientas.html*/
+      width: 94%; }
+    .toolsInfo .toolsInfo__content p:last-of-type,
+    .toolsInfo .toolsInfo__content p:nth-of-type(3) {
+      width: 94%; }
+  .toolsInfo .correccionHerramientaHTML {
+    right: 5% !important;
+    left: 60%;
+    width: 28% !important;
+    height: 64vh !important; }
   .borderTopLeftRadius {
-    border-top-left-radius: 50px !important; }
-  #carouselExampleIndicators {
-    position: absolute;
-    top: 200px;
-    right: 15%;
-    width: 400px !important;
-    height: 520px !important; } }
+    border-top-left-radius: 50px !important;
+    /*Esta categoría redondea el borde superior izquierdo de la sección de herramientas en el archivo herramientas.html*/ } }
+
+/* El media query ubicado debajo se utiliza para corregír la disposición de las cards de la sección de herramientas en los diferentes archivos HTML*/
+@media screen and (min-device-width: 1828px) {
+  .toolSection .card {
+    margin: 0 34px; } }
 
 /* ----------------------------------------------------Vista Computadora-------------------------- */
 /*
@@ -611,13 +688,15 @@ Con este media query se cambió la manera en la que se distribuye el contenido d
     height: 900px;
     margin-left: 7%;
     padding-right: 5%;
-    background-color: #fff;
-    overflow: auto; }
+    background-color: #fff; }
     .infoSection aside h2 {
       font-family: PT Sans;
       font-size: 28px;
       text-align: left;
-      color: #3a3a3a; }
+      color: #3a3a3a;
+      width: 335px;
+      padding-top: 42px;
+      text-align: center; }
     .infoSection aside .navigation {
       line-height: 60px;
       border: none;
@@ -627,12 +706,13 @@ Con este media query se cambió la manera en la que se distribuye el contenido d
         list-style: none;
         width: 100%;
         border-top-left-radius: 20px;
-        border-bottom-left-radius: 20px; }
+        border-bottom-left-radius: 20px;
+        margin-left: 12px; }
         .infoSection aside .navigation ul .navigation__item b:nth-child(1) {
           position: absolute;
           top: -20px;
           height: 20px;
-          width: 100%;
+          width: 335px;
           background: #3a3a3a;
           display: none; }
         .infoSection aside .navigation ul .navigation__item b:nth-child(1)::before {
@@ -640,7 +720,7 @@ Con este media query se cambió la manera en la que se distribuye el contenido d
           position: absolute;
           top: 0;
           left: 0;
-          width: 20%;
+          width: 335px;
           height: 100%;
           border-bottom-right-radius: 20px;
           background: #fff; }
@@ -648,7 +728,7 @@ Con este media query se cambió la manera en la que se distribuye el contenido d
           position: absolute;
           bottom: -20px;
           height: 20px;
-          width: 100%;
+          width: 335px;
           background: #3a3a3a;
           display: none;
           z-index: 1; }
@@ -657,28 +737,34 @@ Con este media query se cambió la manera en la que se distribuye el contenido d
           position: absolute;
           top: 0;
           left: 0;
-          width: 20%;
+          width: 335px;
           height: 100%;
           border-top-right-radius: 20px;
           background: #fff; }
         .infoSection aside .navigation ul .navigation__item span {
           background-color: #fff;
           color: #3a3a3a;
-          margin-left: 5px;
           border: none;
           text-align: left;
-          line-height: 60px; }
+          line-height: 60px;
+          width: 335px;
+          text-align: center; }
+        .infoSection aside .navigation ul .navigation__item .carousel-control-prev-icon,
+        .infoSection aside .navigation ul .navigation__item .carousel-control-next-icon {
+          background-color: #3a3a3a;
+          border-radius: 50%; }
         .infoSection aside .navigation ul .navigation__item .navigation__item__content {
           display: none;
           background-color: #3a3a3a; }
           .infoSection aside .navigation ul .navigation__item .navigation__item__content .navigation__item__content--title {
             margin-left: 80px;
-            margin-top: 25px;
+            margin-top: 45px;
             border-top-left-radius: 15px;
-            border-top-right-radius: 15px; }
+            border-top-right-radius: 15px;
+            width: 40% !important; }
           .infoSection aside .navigation ul .navigation__item .navigation__item__content p {
             line-height: 20px;
-            width: 470px;
+            width: 510px;
             height: 180px;
             margin-left: 80px;
             color: #fff;
@@ -691,13 +777,17 @@ Con este media query se cambió la manera en la que se distribuye el contenido d
             height: 106px;
             padding: 15px; }
           .infoSection aside .navigation ul .navigation__item .navigation__item__content #carouselExampleIndicators {
-            width: 400px;
+            width: 30% !important;
             height: 520px;
             background-color: #fff;
             border-radius: 7%;
             overflow: hidden;
             position: absolute;
-            margin: -150px 0 0 55% !important; }
+            left: 63%;
+            top: 150px; }
+      .infoSection aside .navigation ul .navigation__item:last-of-type .navigation__item__content span {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0; }
       .infoSection aside .navigation ul .navigation__item--active {
         background-color: #3a3a3a;
         display: flex;
@@ -707,47 +797,61 @@ Con este media query se cambió la manera en la que se distribuye el contenido d
         .infoSection aside .navigation ul .navigation__item--active b:nth-child(1),
         .infoSection aside .navigation ul .navigation__item--active b:nth-child(2) {
           display: block; }
-        .infoSection aside .navigation ul .navigation__item--active > a span {
-          color: #fff;
-          background-color: #3a3a3a;
-          border-top-left-radius: 25px;
-          border-bottom-left-radius: 25px;
-          padding-left: 15px;
-          margin-left: 20px; }
+        .infoSection aside .navigation ul .navigation__item--active > a {
+          border-top-left-radius: 50px;
+          border-bottom-left-radius: 50px; }
+          .infoSection aside .navigation ul .navigation__item--active > a span {
+            color: #fff;
+            background-color: #3a3a3a;
+            border-top-left-radius: 25px;
+            border-bottom-left-radius: 25px;
+            margin: 0; }
         .infoSection aside .navigation ul .navigation__item--active > .navigation__item__content {
           display: initial;
           position: absolute;
-          width: 73%;
-          margin-left: 20%;
-          width: 85.7%;
+          right: -5%;
+          margin-left: 335px;
+          width: auto;
           height: 83vh;
           border-bottom-left-radius: 80px;
           z-index: 2; }
           .infoSection aside .navigation ul .navigation__item--active > .navigation__item__content .navigation__item__content--title:first-of-type {
-            margin-top: 60px; }
+            margin-top: 50px; }
   /* Esta sección del código se encarga de alinear en altura los contenidos de los diferentes elementos li, ya que empiezan desde diferentes alturas */
   .navigation ul li:nth-of-type(1) .navigation__item__content {
-    margin-top: -117px; }
+    top: -160px; }
+    .navigation ul li:nth-of-type(1) .navigation__item__content > #carouselExampleIndicators {
+      margin-top: 0px !important; }
   .navigation ul li:nth-of-type(2) .navigation__item__content {
-    margin-top: -177px; }
+    top: -220px; }
+    .navigation ul li:nth-of-type(2) .navigation__item__content > #carouselExampleIndicators {
+      margin-top: -26px !important; }
   .navigation ul li:nth-of-type(3) .navigation__item__content {
-    margin-top: -237px; }
+    top: -280px; }
+    .navigation ul li:nth-of-type(3) .navigation__item__content > #carouselExampleIndicators {
+      margin-top: 0px !important; }
   .navigation ul li:nth-of-type(4) .navigation__item__content {
-    margin-top: -297px; }
+    top: -340px; }
+    .navigation ul li:nth-of-type(4) .navigation__item__content > #carouselExampleIndicators {
+      margin-top: 0px !important; }
   .navigation ul li:nth-of-type(5) .navigation__item__content {
-    margin-top: -357px; }
+    top: -400px; }
+    .navigation ul li:nth-of-type(5) .navigation__item__content > #carouselExampleIndicators {
+      margin-top: 0px !important; }
   .navigation ul li:nth-of-type(6) .navigation__item__content {
-    margin-top: -417px; }
+    top: -460px; }
+    .navigation ul li:nth-of-type(6) .navigation__item__content > #carouselExampleIndicators {
+      margin-top: 0px !important; }
   .navigation ul li:nth-of-type(7) .navigation__item__content {
-    margin-top: -477px; }
-  .navigation ul li:nth-of-type(8) .navigation__item__content {
-    margin-top: -537px; }
+    top: -520px; }
+    .navigation ul li:nth-of-type(7) .navigation__item__content > #carouselExampleIndicators {
+      margin-top: 0px !important; }
   .toolSection {
     background-color: #fff;
     margin-top: 0;
     height: auto;
     padding: 150px 160px 30px 160px;
-    width: 93.05%;
+    width: 93.09%;
     margin-left: 6.95%;
     display: flex;
     flex-direction: row;
